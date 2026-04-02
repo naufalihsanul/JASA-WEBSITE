@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO Meta Tags -->
+    <title>Bimbel Guruku | Gerbang Menuju Kampus Impian</title>
+    <meta name="description"
+        content="Bimbel Guruku adalah lembaga pendidikan terbaik untuk persiapan UTBK, ujian sekolah, dan pendalaman materi. Dapatkan bimbingan intensif dengan tutor profesional.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6D28D9', // Deep Violet
+                        'primary-dark': '#4C1D95',
+                        'primary-light': '#8B5CF6',
+                        accent: '#F59E0B', // Amber accent for trust/premium feel
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'marquee': 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #7C3AED;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6D28D9;
+        }
+
+        /* Gradient Text Helper */
+        .text-gradient {
+            background: linear-gradient(135deg, #7C3AED 0%, #000000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Classes */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Navigation mobile toggle hack without JS */
+        #menu-toggle:checked~#mobile-menu {
+            display: flex;
+        }
+
+        /* Hover Reveal Effect */
+        .card-hover:hover .hover-reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease-out;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black font-sans antialiased overflow-x-hidden">
+
+    <!-- HEADER & NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-[100] transition-all duration-300">
+        <nav
+            class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between glass mt-4 rounded-2xl mx-4 lg:mx-auto">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/20">
+                    G </div>
+                <span class="text-xl font-extrabold tracking-tight"> Bimbel <span class="text-primary italic"> Guruku
+                    </span> </span>
+            </div>
+
+            <!-- Desktop Nav Menu -->
+            <ul class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-800">
+                <li><a href="#beranda" class="hover:text-primary transition-colors">Beranda</a></li>
+                <li><a href="#program" class="hover:text-primary transition-colors">Program</a></li>
+                <li><a href="#keunggulan" class="hover:text-primary transition-colors">Keunggulan</a></li>
+                <li><a href="#testimoni" class="hover:text-primary transition-colors">Testimoni</a></li>
+                <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+            </ul>
+
+            <!-- Right CTA -->
+            <div class="flex items-center gap-4">
+                <a href="#login"
+                    class="hidden sm:block text-sm font-bold text-black border-2 border-black px-6 py-2 rounded-full hover:bg-black hover:text-white transition-all">
+                    Masuk
+                </a>
+                <!-- Mobile Navigation Toggle (Checkbox Hack) -->
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+                <label for="menu-toggle"
+                    class="md:hidden cursor-pointer p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-menu">
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </label>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu"
+                class="hidden absolute top-24 left-4 right-4 bg-white rounded-3xl p-8 flex-col gap-6 shadow-2xl border border-gray-100 md:hidden animate-fade-in-down">
+                <a href="#beranda" class="text-lg font-bold hover:text-primary">Beranda</a>
+                <a href="#program" class="text-lg font-bold hover:text-primary">Program</a>
+                <a href="#keunggulan" class="text-lg font-bold hover:text-primary">Keunggulan</a>
+                <a href="#testimoni" class="text-lg font-bold hover:text-primary">Testimoni</a>
+                <a href="#faq" class="text-lg font-bold hover:text-primary">FAQ</a>
+                <hr class="border-gray-100">
+                <a href="#login" class="w-full text-center bg-black text-white py-4 rounded-2xl font-bold">Masuk
+                    Member</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (Inspired by Dream Homes layout) -->
+        <section id="beranda" class="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden">
+
+
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Content Area -->
+                <div class="space-y-8 stagger-reveal">
+                    <div>
+                        <span
+                            class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full uppercase tracking-widest mb-6">
+                            Lembaga Pendidikan Nasional No. 1
+                        </span>
+                        <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] text-black">
+                            Solusi Belajar <br> Anak <span
+                                class="italic font-normal serif text-primary underline decoration-black/10">Pintar</span>
+                        </h1>
+                        <p class="mt-8 text-lg text-gray-600 max-w-lg leading-relaxed">
+                            Bimbel Guruku hadir di Mataram untuk membantu putra-putri Anda meraih nilai akademis impian
+                            dengan metode belajar yang menyenangkan dan komunikatif.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-6">
+                        <a href="https://wa.me/6287865329232" target="_blank"
+                            class="px-8 py-4 bg-primary text-white rounded-2xl font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20 flex items-center gap-3">
+                            Daftar Sekarang
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-right">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </a>
+                        <button
+                            class="flex items-center gap-3 text-lg font-bold text-black border-2 border-transparent hover:border-gray-100 px-6 py-4 rounded-2xl transition-all">
+                            <span
+                                class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-100 group">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="lucide lucide-play group-hover:scale-110 transition-transform">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                            </span>
+                            Lihat Video Demo
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <!-- Right Visual Area -->
+                <div class="relative">
+                    <!-- Main Image Placeholder (Representing the 3D student/building style) -->
+                    <div class="">
+                        <img src="assets/images/undraw_teaching_58yg.png" alt="Bimbel Guruku Student"
+                            class="w-full h-full object- rounde-m">
+                        <!-- Overlay gradient -->
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee / Social Proof Section -->
+        <section class="py-12 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 mb-8 flex items-center justify-between">
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Dipercaya oleh lulusan universitas
+                    terbaik:</p>
+                <div class="h-px bg-gray-100 flex-1 ml-8"></div>
+            </div>
+
+            <div class="relative flex overflow-hidden group">
+                <div class="py-4 animate-marquee whitespace-nowrap flex items-center gap-16 lg:gap-32">
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UI</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">ITB</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UGM</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UNDIP</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UNAIR</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UNPAD</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">ITS</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">IPB</span>
+                    <!-- Duplicate for infinite -->
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UI</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">ITB</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UGM</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UNDIP</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UNAIR</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">UNPAD</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">ITS</span>
+                    <span
+                        class="text-3xl font-extrabold text-gray-200 hover:text-black transition-colors cursor-default">IPB</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="py-20 lg:py-32 bg-gray-50/50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div
+                    class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left sm:grid-cols-2 sm:text-lg">
+                    <div class="space-y-2 group">
+                        <h3 class="text-6xl font-extrabold text-black group-hover:text-primary transition-colors">10th
+                        </h3>
+                        <p class="font-bold text-gray-400 uppercase text-xs tracking-widest">Pengalaman Edukasi</p>
+                    </div>
+                    <div class="space-y-2 group">
+                        <h3 class="text-6xl font-extrabold text-black group-hover:text-primary transition-colors">3
+                        </h3>
+                        <p class="font-bold text-gray-400 uppercase text-xs tracking-widest">Gedung Belajar</p>
+                    </div>
+                    <div class="space-y-2 group">
+                        <h3 class="text-6xl font-extrabold text-black group-hover:text-primary transition-colors">500+
+                        </h3>
+                        <p class="font-bold text-gray-400 uppercase text-xs tracking-widest">Tutor Profesional</p>
+                    </div>
+                    <div class="space-y-2 group">
+                        <h3 class="text-6xl font-extrabold text-black group-hover:text-primary transition-colors">10k+
+                        </h3>
+                        <p class="font-bold text-gray-400 uppercase text-xs tracking-widest">Siswa Berhasil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAM SECTION -->
+        <section id="program" class="py-24 lg:py-40 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-end justify-between gap-8 mb-20">
+                    <div class="max-w-2xl space-y-6">
+                        <h2 class="text-4xl lg:text-5xl font-extrabold text-black leading-tight">
+                            Pilih Program Masa Depan <br> yang <span
+                                class="text-primary italic font-normal underline decoration-black/5">Tepat
+                                Untukmu</span>
+                        </h2>
+                        <p class="text-lg text-gray-500 leading-relaxed">
+                            Kami merancang kurikulum yang spesifik untuk setiap tingkatan pendidikan guna memaksimalkan
+                            potensi akademik setiap siswa.
+                        </p>
+                    </div>
+                    <a href="#all-programs"
+                        class="group flex items-center gap-3 font-bold text-black border-b-2 border-black pb-2 hover:text-primary hover:border-primary transition-all">
+                        Semua Program
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-up-right group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Program Card 1 -->
+                    <div
+                        class="group relative bg-white p-8 rounded-[3rem] border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+
+                        <div
+                            class="w-16 h-16 bg-black text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-black/10 group-hover:bg-primary transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-graduation-cap">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-black mb-4">SD / MI Reguler</h3>
+                        <p class="text-gray-500 mb-8 leading-relaxed">Focus pada penguatan konsep dasar matematika dan
+                            science dasar secara menyenangkan.</p>
+                        <ul class="space-y-3 mb-10 text-sm font-semibold text-gray-600">
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Math Specialist
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Reading Literacy
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Science Experience
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-2xl bg-gray-50 font-bold group-hover:bg-black group-hover:text-white transition-all">Pilih
+                            Program</button>
+                    </div>
+
+                    <!-- Program Card 2 -->
+                    <div
+                        class="group relative bg-primary p-8 rounded-[3rem] shadow-[0_35px_60px_-15px_rgba(124,58,237,0.3)] hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-[5rem] -mr-8 -mt-8"></div>
+                        <div
+                            class="w-16 h-16 bg-white text-primary rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-white/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-rocket">
+                                <path
+                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                                <path
+                                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                                <path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3" />
+                                <path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-white mb-4">UTBK / SNBT Master</h3>
+                        <p class="text-purple-100 mb-8 leading-relaxed">Program unggulan dengan sistem simulasi persis
+                            aslinya dan analisis data AI.</p>
+                        <ul class="space-y-3 mb-10 text-sm font-semibold text-white/80">
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-white"></div> AI Prediction Score
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-white"></div> Unlimited Tryouts
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-white"></div> Personalized Mentoring
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-2xl bg-white text-primary font-extrabold shadow-xl hover:bg-black hover:text-white transition-all">Daftar
+                            Sekarang</button>
+                    </div>
+
+                    <!-- Program Card 3 -->
+                    <div
+                        class="group relative bg-white p-8 rounded-[3rem] border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+
+                        <div
+                            class="w-16 h-16 bg-black text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-black/10 group-hover:bg-primary transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-book-open-check">
+                                <path d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z" />
+                                <path d="m16 12 2 2 4-4" />
+                                <path d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-black mb-4">SMP / SMA Intensive</h3>
+                        <p class="text-gray-500 mb-8 leading-relaxed">Pendalaman materi sekolah, persiapan ujian
+                            semester, dan bantuan PR 24/7 dengan tutor standby.</p>
+                        <ul class="space-y-3 mb-10 text-sm font-semibold text-gray-600">
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Kurikulum Merdeka
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> PR Help Desk 24/7
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Modul Super Lengkap
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-2xl bg-gray-50 font-bold group-hover:bg-black group-hover:text-white transition-all">Pilih
+                            Program</button>
+                    </div>
+
+                    <!-- Program Card 4 -->
+                    <div
+                        class="group relative bg-white p-8 rounded-[3rem] border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+
+                        <div
+                            class="w-16 h-16 bg-black text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-black/10 group-hover:bg-primary transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-baby">
+                                <rect width="20" height="12" x="2" y="6" rx="2" />
+                                <circle cx="12" cy="12" r="2" />
+                                <path d="M6 12h.01M18 12h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-black mb-4">PAUD / TK (Calistung)</h3>
+                        <p class="text-gray-500 mb-8 leading-relaxed">Membantu si kecil mengenal huruf dan angka dengan
+                            cara yang menyenangkan & character building.</p>
+                        <ul class="space-y-3 mb-10 text-sm font-semibold text-gray-600">
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Reading & Writing
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Basic Counting
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-primary"></div> Fun Learning
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-2xl bg-gray-50 font-bold group-hover:bg-black group-hover:text-white transition-all">Pilih
+                            Program</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE / KEUNGGULAN SECTION -->
+        <section id="keunggulan" class="py-24 lg:py-40 bg-gray-50/30 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-24 items-center">
+
+                    <!-- Left: Feature Grid -->
+                    <div class="grid sm:grid-cols-2 gap-8 order-2 lg:order-1">
+                        <div
+                            class="group p-8 rounded-3xl bg-white border border-gray-100 shadow-xl shadow-black/5 hover:border-primary/20 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-zap">
+                                    <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-black mb-3 italic">Fast Response</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed font-medium">Layanan bantuan tugas dan
+                                konsultasi akademik yang siap siaga 24 jam untuk siswa.</p>
+                        </div>
+
+                        <div
+                            class="group p-8 rounded-3xl bg-white border border-gray-100 shadow-xl shadow-black/5 hover:border-primary/20 transition-all sm:mt-12">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-users-2">
+                                    <path d="M14 19a6 6 0 0 0-12 0" />
+                                    <circle cx="8" cy="9" r="4" />
+                                    <path d="M22 19a6 6 0 0 0-6-6 4 4 0 1 0 0-8" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-black mb-3 italic">Tutor Berkompeten</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed font-medium">Tutor kami berkompeten dan
+                                friendly, memberikan suasana belajar yang betah bagi siswa.</p>
+                        </div>
+
+                        <div
+                            class="group p-8 rounded-3xl bg-white border border-gray-100 shadow-xl shadow-black/5 hover:border-primary/20 transition-all">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-layout-grid">
+                                    <rect width="7" height="7" x="3" y="3" rx="1" />
+                                    <rect width="7" height="7" x="14" y="3" rx="1" />
+                                    <rect width="7" height="7" x="14" y="14" rx="1" />
+                                    <rect width="7" height="7" x="3" y="14" rx="1" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-black mb-3 italic">Materi Lengkap</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed font-medium">Modul belajar yang disusun
+                                sistematis sesuai dengan update kurikulum nasional terbaru.</p>
+                        </div>
+
+                        <div
+                            class="group p-8 rounded-3xl bg-white border border-gray-100 shadow-xl shadow-black/5 hover:border-primary/20 transition-all sm:mt-12">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-activity">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-black mb-3 italic">Analisis AI</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed font-medium">Menggunakan AI untuk memetakan
+                                kekuatan dan kelemahan siswa dalam belajar.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="space-y-8 order-1 lg:order-2">
+                        <span
+                            class="text-primary font-bold tracking-widest text-xs uppercase bg-primary/5 px-4 py-2 rounded-full">Keunggulan
+                            Utama</span>
+                        <h2 class="text-4xl lg:text-6xl font-extrabold text-black !leading-[1.1]">Kenapa Memilih <span
+                                class="text-gradient">Bimbel Guruku</span>?</h2>
+                        <p class="text-lg text-gray-500 leading-relaxed">
+                            Kami bukan sekadar tempat les biasa. Kami adalah partner strategis Anda untuk menaklukkan
+                            setiap tantangan akademis dengan metode yang telah teruji selama lebih dari satu dekade.
+                        </p>
+
+                        <div class="space-y-6 pt-4">
+                            <div class="flex items-start gap-6 group">
+                                <div
+                                    class="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all font-bold">
+                                    1</div>
+                                <div>
+                                    <h5 class="text-xl font-bold text-black mb-1 italic">Metode Belajar Hybrid</h5>
+                                    <p class="text-gray-500 text-sm">Fleksibilitas belajar offline di cabang atau online
+                                        dari rumah dengan kualitas yang sama baiknya.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6 group">
+                                <div
+                                    class="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all font-bold">
+                                    2</div>
+                                <div>
+                                    <h5 class="text-xl font-bold text-black mb-1 italic">Personalized Learning Path</h5>
+                                    <p class="text-gray-500 text-sm">Setiap siswa memiliki rencana belajar yang berbeda
+                                        sesuai dengan target universitas/sekolah impian.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6 group">
+                                <div
+                                    class="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all font-bold">
+                                    3</div>
+                                <div>
+                                    <h5 class="text-xl font-bold text-black mb-1 italic">Komunitas Belajar Ambis</h5>
+                                    <p class="text-gray-500 text-sm">Bergabunglah dengan ribuan siswa ambisius lainnya
+                                        untuk saling memotivasi dan bertukar informasi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT / INFORMASI SECTION (Mental Check for informasi.png reference) -->
+        <section id="informasi" class="py-24 lg:py-40 bg-white relative">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+                <div class="relative space-y-12">
+                    <img src="assets/images/gambar2.png" alt="Informasi Bimbel Guruku"
+                        class="w-full rounded-[3rem] shadow-2xl border-8 border-gray-50/50 hover:grayscale-0 transition-all duration-700">
+
+                </div>
+
+                <div class="space-y-8">
+                    <span
+                        class="text-xs font-bold text-gray-400 uppercase tracking-widest px-4 py-2 bg-gray-100 rounded-full">Informasi
+                        Terupdate</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-black leading-tight">Selalu Terkoneksi dengan
+                        <br> <span class="text-primary italic font-normal">Informasi Akademis</span> Terbaru
+                    </h2>
+                    <p class="text-lg text-gray-500 leading-relaxed">
+                        Kami memastikan setiap orang tua dan siswa mendapatkan akses informasi yang transparan mengenai
+                        progres belajar, jadwal ujian, hingga update kuota PTN melalui portal informasi khusus.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-8">
+                        <div class="flex gap-4">
+                            <div class="w-1.5 h-12 bg-primary rounded-full mt-2"></div>
+                            <div>
+                                <h6 class="font-bold text-black italic">Real-time Progress Report</h6>
+                                <p class="text-xs text-gray-400 mt-1 font-medium">Pantau nilai tryout & kehadiran secara
+                                    instan lewat aplikasi mobile eksklusif kami.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1.5 h-12 bg-black rounded-full mt-2"></div>
+                            <div>
+                                <h6 class="font-bold text-black italic">Admission Counseling</h6>
+                                <p class="text-xs text-gray-400 mt-1 font-medium">Layanan konsultasi pemilihan jurusan
+                                    dan universitas berdasarkan minat bakat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 flex items-center gap-12">
+                        <div class="flex -space-x-3">
+                            <img class="w-12 h-12 rounded-full border-4 border-white shadow-md object-cover"
+                                src="https://ui-avatars.com/api/?name=User1&background=random" alt="u">
+                            <img class="w-12 h-12 rounded-full border-4 border-white shadow-md object-cover"
+                                src="https://ui-avatars.com/api/?name=User2&background=random" alt="u">
+                            <img class="w-12 h-12 rounded-full border-4 border-white shadow-md object-cover"
+                                src="https://ui-avatars.com/api/?name=User3&background=random" alt="u">
+                            <div
+                                class="w-12 h-12 rounded-full border-4 border-white bg-black flex items-center justify-center text-white text-[10px] font-bold">
+                                100+</div>
+                        </div>
+                        <p class="text-sm font-bold text-gray-800 italic">Disukai oleh Ribuan Orang Tua Siswa
+                            se-Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed Placeholder (from instagram.png reference) -->
+        <section class="py-12 bg-black/5">
+            <div class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-8 mb-4">
+                <div class="flex items-center gap-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="IG"
+                        class="w-8 h-8 rounded-lg">
+                    <span class="text-sm font-bold text-black tracking-tight underline">@BimbelGuruku</span>
+                </div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] animate-pulse">Follow for
+                    Updates</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 px-6 overflow-x-hidden">
+                <!-- IG Post 1 -->
+                <div class="aspect-[4/5] bg-gray-100 rounded-2xl group overflow-hidden relative shadow-sm border border-black/5">
+                    <img src="assets/images/berita/berita1.png" alt="Feed 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" class="lucide lucide-heart">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- IG Post 2 -->
+                <div class="aspect-[4/5] bg-gray-100 rounded-2xl group overflow-hidden relative shadow-sm border border-black/5">
+                    <img src="assets/images/berita/berita2.png" alt="Feed 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" class="lucide lucide-heart">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- IG Post 3 -->
+                <div class="aspect-[4/5] bg-gray-100 rounded-2xl group overflow-hidden relative shadow-sm border border-black/5">
+                    <img src="assets/images/berita/berita1.png" alt="Feed 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" class="lucide lucide-heart">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- IG Post 4 -->
+                <div class="aspect-[4/5] bg-gray-100 rounded-2xl group overflow-hidden relative shadow-sm border border-black/5">
+                    <img src="assets/images/berita/berita2.png" alt="Feed 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" class="lucide lucide-heart">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- IG Post 5 -->
+                <div class="aspect-[4/5] bg-gray-100 rounded-2xl group overflow-hidden relative shadow-sm border border-black/5">
+                    <img src="assets/images/berita/berita1.png" alt="Feed 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" class="lucide lucide-heart">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- IG Post 6 -->
+                <div class="aspect-[4/5] bg-gray-100 rounded-2xl group overflow-hidden relative shadow-sm border border-black/5">
+                    <img src="assets/images/berita/berita2.png" alt="Feed 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" class="lucide lucide-heart">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TUTOR SHOWCASE SECTION -->
+        <section id="tutor" class="py-24 lg:py-40 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-black leading-tight italic">Ekspertise dari
+                        <span class="text-primary italic font-normal">Tutor Terbaik</span>
+                    </h2>
+                    <p class="text-gray-500 font-medium">Bekerja sama dengan pengajar profesional yang memiliki
+                        pengalaman bertahun-tahun dalam membimbing siswa menembus PTN impian.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Tutor 1 -->
+                    <div class="group relative overflow-hidden rounded-[2.5rem] bg-gray-50 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+                            alt="Tutor"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <span
+                                class="text-primary text-[10px] font-bold uppercase tracking-widest mb-2 bg-white/10 backdrop-blur w-fit px-3 py-1 rounded-full">Owner
+                                / Math</span>
+                            <h4 class="text-xl font-bold text-white">Mr. WJ (I Wayan Juliana)</h4>
+                            <p class="text-gray-400 text-sm font-medium">Alumni Universitas Indonesia</p>
+                            <div
+                                class="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-linkedin">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                        <rect width="4" height="12" x="2" y="9" />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-twitter">
+                                        <path
+                                            d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tutor 2 -->
+                    <div class="group relative overflow-hidden rounded-[2.5rem] bg-gray-50 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                            alt="Tutor"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <span
+                                class="text-primary text-[10px] font-bold uppercase tracking-widest mb-2 bg-white/10 backdrop-blur w-fit px-3 py-1 rounded-full">Fisika
+                                / UTBK</span>
+                            <h4 class="text-xl font-bold text-white">Budi Santoso, M.Si</h4>
+                            <p class="text-gray-400 text-sm font-medium">Alumni ITB Bandung</p>
+                            <div
+                                class="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-linkedin">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                        <rect width="4" height="12" x="2" y="9" />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tutor 3 -->
+                    <div class="group relative overflow-hidden rounded-[2.5rem] bg-gray-50 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=800"
+                            alt="Tutor"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <span
+                                class="text-primary text-[10px] font-bold uppercase tracking-widest mb-2 bg-white/10 backdrop-blur w-fit px-3 py-1 rounded-full">Bahasa
+                                Inggris</span>
+                            <h4 class="text-xl font-bold text-white">Denny Kurniawan</h4>
+                            <p class="text-gray-400 text-sm font-medium">Alumni Universitas Gadjah Mada</p>
+                        </div>
+                    </div>
+                    <!-- Tutor 4 -->
+                    <div class="group relative overflow-hidden rounded-[2.5rem] bg-gray-50 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800"
+                            alt="Tutor"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <span
+                                class="text-primary text-[10px] font-bold uppercase tracking-widest mb-2 bg-white/10 backdrop-blur w-fit px-3 py-1 rounded-full">Biologi</span>
+                            <h4 class="text-xl font-bold text-white">Anita Rahma, S.Pd</h4>
+                            <p class="text-gray-400 text-sm font-medium">Alumni Universitas Diponegoro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <button
+                        class="px-10 py-4 border-2 border-black rounded-2xl font-bold hover:bg-black hover:text-white transition-all italic tracking-tight">Lihat
+                        Semua Mentor Kami (50+)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimoni" class="py-24 lg:py-40 bg-black text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-3 gap-16 items-start">
+                    <div class="lg:sticky lg:top-40 space-y-8">
+                        <span
+                            class="text-primary font-bold tracking-widest text-xs uppercase bg-white/5 px-4 py-2 rounded-full border border-white/10">Suara
+                            Siswa</span>
+                        <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight">Apa Kata Mereka Tentang <span
+                                class="text-primary">Kami</span>?</h2>
+                        <p class="text-gray-400 leading-relaxed font-medium">Keberhasilan siswa adalah prioritas utama
+                            kami. Berikut adalah pengalaman nyata dari mereka yang telah berjuang bersama Bimbel Guruku.
+                        </p>
+
+                        <div class="flex items-center gap-6 pt-4">
+                            <div class="flex -space-x-4">
+                                <div
+                                    class="w-14 h-14 rounded-full border-4 border-black bg-gray-800 flex items-center justify-center font-bold">
+                                    4.9</div>
+                            </div>
+                            <div>
+                                <div class="flex gap-1 text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
+                                <p class="text-xs font-bold mt-1">Berdasarkan 46 Review Google</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+                        <div class="space-y-8">
+                            <!-- Testi Card 1 -->
+                            <div
+                                class="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                    fill="currentColor" class="text-primary mb-6 opacity-40">
+                                    <path
+                                        d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L21.017 3V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3.01696 21L3.01696 18C3.01696 16.8954 3.91239 16 5.01696 16H8.01696C8.56925 16 9.01696 15.5523 9.01696 15V9C9.01696 8.44772 8.56925 8 8.01696 8H5.01696C3.91239 8 3.01696 7.10457 3.01696 6V3L10.017 3V15C10.017 18.3137 7.33066 21 4.01696 21H3.01696Z" />
+                                </svg>
+                                <p class="text-xl font-medium leading-relaxed italic">"Bimbel recomended. Cuma 3 bulan
+                                    anak udah bisa calistung dari yg hanya kenal huruf vocal n tidak bisa pegang pensil.
+                                    the best"</p>
+                                <div class="mt-8 flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white font-bold">
+                                        SS</div>
+                                    <div>
+                                        <span class="block font-bold">Salbi Sal</span>
+                                        <span
+                                            class="block text-xs text-gray-500 font-bold uppercase tracking-wider">Orang
+                                            Tua Siswa</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testi Card 2 -->
+                            <div
+                                class="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                                <p class="text-xl font-medium leading-relaxed italic">"Tempat les yg recomended banget
+                                    di Mataram. Ownernya komunikatif selalu menyediakan waktu utk diskusi dg siswa dan
+                                    orgtua. Anak sy feel at home belajar di sini."</p>
+                                <div class="mt-8 flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold">
+                                        TK</div>
+                                    <div>
+                                        <span class="block font-bold">Tina Kartina</span>
+                                        <span
+                                            class="block text-xs text-gray-500 font-bold uppercase tracking-wider">Local
+                                            Guide Mataram</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-8 md:mt-16">
+                            <!-- Testi Card 3 -->
+                            <div
+                                class="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                                <p class="text-xl font-medium leading-relaxed italic">"Belajar di Guruku 1 jam langsung
+                                    mengerti. Bimbel Guruku TOP BGT! Tutornya friendly banget sama muridnya. Luar biasa
+                                    deh 👍👍"</p>
+                                <div class="mt-8 flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold">
+                                        GH</div>
+                                    <div>
+                                        <span class="block font-bold">Gita Herlinda</span>
+                                        <span
+                                            class="block text-xs text-gray-500 font-bold uppercase tracking-wider">Alumni
+                                            Siswa</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testi Card 4 -->
+                            <div
+                                class="p-10 rounded-[2.5rem] bg-primary/20 border border-primary/30 hover:bg-primary/30 transition-all">
+                                <p class="text-xl font-bold leading-relaxed italic">"Tempat les yg gak cuma bantu lebih
+                                    paham pelajaran sekolah, buat adik2 PAUD dan TK pun mantap krna ada character
+                                    building juga yg disisipkan setiap kali les 😁👌"</p>
+                                <div class="mt-8 flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white font-bold">
+                                        AA</div>
+                                    <div>
+                                        <span class="block font-bold">Amira Amalia</span>
+                                        <span
+                                            class="block text-xs text-primary font-bold uppercase tracking-wider">Orang
+                                            Tua Siswa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="py-24 lg:py-40 bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-20 space-y-4">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-black leading-tight italic"><span
+                            class="text-primary italic font-normal">Tanya Jawab</span> Seputar Bimbel</h2>
+                    <p class="text-gray-500 font-medium">Temukan jawaban untuk pertanyaan yang paling sering ditanyakan
+                        oleh orang tua dan calon siswa.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <details
+                        class="group p-6 rounded-3xl bg-gray-50 border border-transparent hover:border-primary/20 transition-all">
+                        <summary
+                            class="flex items-center justify-between font-bold text-lg cursor-pointer list-none italic marker:content-none">
+                            Bagaimana sistem belajarnya?
+                            <span class="transition-transform group-open:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chevron-down">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-gray-500 leading-relaxed font-medium">
+                            Kami menyediakan sistem belajar hybrid (bisa datang ke cabang atau via online) dengan fokus
+                            pada penguatan konsep dasar sebelum masuk ke latihan soal tingkat tinggi (HOTS).
+                        </p>
+                    </details>
+
+                    <details
+                        class="group p-6 rounded-3xl bg-gray-50 border border-transparent hover:border-primary/20 transition-all">
+                        <summary
+                            class="flex items-center justify-between font-bold text-lg cursor-pointer list-none italic">
+                            Apakah ada jaminan lulus PTN?
+                            <span class="transition-transform group-open:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chevron-down">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-gray-500 leading-relaxed font-medium">
+                            Meskipun kelulusan bergantung pada usaha individu, kami memberikan jaminan bimbingan
+                            intensif dan simulasi berulang sampai siswa benar-benar siap menghadapi ujian asli dengan
+                            skor yang optimal.
+                        </p>
+                    </details>
+
+                    <details
+                        class="group p-6 rounded-3xl bg-gray-50 border border-transparent hover:border-primary/20 transition-all">
+                        <summary
+                            class="flex items-center justify-between font-bold text-lg cursor-pointer list-none italic">
+                            Bagaimana cara mendaftarnya?
+                            <span class="transition-transform group-open:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chevron-down">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-gray-500 leading-relaxed font-medium">
+                            Anda bisa mendaftar langsung lewat tombol "Daftar Sekarang" di website ini untuk terhubung
+                            dengan tim admin kami via WhatsApp atau langsung mengunjungi cabang terdekat.
+                        </p>
+                    </details>
+
+                    <details
+                        class="group p-6 rounded-3xl bg-gray-50 border border-transparent hover:border-primary/20 transition-all">
+                        <summary
+                            class="flex items-center justify-between font-bold text-lg cursor-pointer list-none italic">
+                            Apakah ada fasilitas cicilan biaya pendidikan?
+                            <span class="transition-transform group-open:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chevron-down">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-gray-500 leading-relaxed font-medium">
+                            Ya, kami menyediakan skema pembayaran bertahap untuk memudahkan para orang tua tanpa bunga
+                            sepersen pun. Silakan konsultasikan dengan admin cabang kami.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL SECTION -->
+        <section class="py-24 max-w-7xl mx-auto px-6 mb-24">
+            <div class="bg-black rounded-[4rem] p-12 lg:p-24 text-center space-y-10 relative overflow-hidden">
+
+
+                <h2 class="text-4xl lg:text-7xl font-extrabold text-white !leading-tight italic">Siap Menjadi Bagian
+                    dari <br> <span class="text-primary italic font-normal underline decoration-white/10">Generasi
+                        Emas</span> Selanjutnya?</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Kuota terbatas untuk setiap angkatan. Amankan kursi
+                    belajarmu sekarang juga dan raih impianmu!</p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#"
+                        class="px-12 py-5 bg-primary text-white rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl shadow-primary/30">Daftar
+                        Sekarang</a>
+                    <a href="#"
+                        class="px-12 py-5 bg-white text-black rounded-2xl font-bold text-xl hover:bg-gray-100 transition-all">Konsultasi
+                        Gratis</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MEGA FOOTER SECTION -->
+    <footer class="bg-gray-50 border-t border-gray-100 pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20">
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-primary/20">
+                            G </div>
+                        <span class="text-2xl font-extrabold tracking-tight italic"> Bimbel <span
+                                class="text-primary italic"> Guruku </span> </span>
+                    </div>
+                    <p class="text-gray-500 leading-relaxed text-lg italic">
+                        Lembaga bimbingan belajar terbaik di Indonesia yang berfokus pada hasil nyata dan pengembangan
+                        karakter siswa.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-instagram">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-facebook">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-youtube">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                <path d="m10 15 5-3-5-3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Links 1 -->
+                <div class="space-y-6">
+                    <h5 class="font-bold text-black text-sm uppercase tracking-widest italic">Navigasi</h5>
+                    <ul class="space-y-4 text-gray-500 font-medium">
+                        <li><a href="#" class="hover:text-primary transition-colors">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Program Belajar</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Daftar Tutor</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Beasiswa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Links 2 -->
+                <div class="space-y-6">
+                    <h5 class="font-bold text-black text-sm uppercase tracking-widest italic">Program</h5>
+                    <ul class="space-y-4 text-gray-500 font-medium">
+                        <li><a href="#" class="hover:text-primary transition-colors">Intensif UTBK</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Kedokteran Master</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Reguler SMA</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Olimpiade Sains</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Links 3 -->
+                <div class="space-y-6">
+                    <h5 class="font-bold text-black text-sm uppercase tracking-widest italic">Hubungi Kami</h5>
+                    <ul class="space-y-4 text-gray-400 font-medium text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" class="text-primary mt-1">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span>0818-0628-1407</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" class="text-primary mt-1">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                            <span>bimbelguruku@gmail.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" class="text-primary mt-1">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>Jl. Selaparang No. 36/37, <br> Mayura, Kec. Cakranegara, Mataram</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-gray-400 text-sm font-bold italic uppercase tracking-widest">&copy; 2024 Bimbel Guruku.
+                    All Rights Reserved.</p>
+                <div class="flex gap-8 text-xs font-bold text-gray-400 uppercase tracking-widest italic">
+                    <a href="#" class="hover:text-black">Privacy Policy</a>
+                    <a href="#" class="hover:text-black">Terms of Service</a>
+                    <a href="#" class="hover:text-black">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS LINT FIX FOR BACKGROUND-CLIP (Line 60ish) -->
+    <style>
+        .text-gradient {
+            background: linear-gradient(135deg, #7C3AED 0%, #000000 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+
+    </main>
+
+</body>
+
+</html>
