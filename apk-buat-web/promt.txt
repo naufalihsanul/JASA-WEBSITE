@@ -1,0 +1,332 @@
+# 🎨 Panduan Menulis Prompt Website Premium (Anti AI-Look)
+
+## Kenapa Website dari AI Terlihat "AI-Generated"?
+
+Sebelum ke solusi, pahami dulu masalahnya. Website yang terlihat AI biasanya punya ciri:
+
+| ❌ Ciri AI-Look | ✅ Ciri Professional |
+|---|---|
+| Warna generik (biru polos, gradien ungu-biru) | Palet warna yang *curated* dan unik |
+| Layout simetris sempurna, grid kaku | Asimetris intentional, whitespace berani |
+| Font default atau 1 font saja | Typography pairing 2-3 font dengan hierarchy jelas |
+| Hero section generik dengan heading besar + CTA | Hero section dengan komposisi editorial |
+| Rounded corners berlebihan di mana-mana | Mix sharp & rounded sesuai konteks |
+| Gradien yang sama di semua section | Gradien subtle, dipakai strategis |
+| Shadow yang flat dan uniform | Shadow berlapis (layered shadows) |
+| Animasi bounce/fade generic | Micro-interaction yang purposeful |
+| Spacing tidak konsisten | Spacing system (4px/8px grid) |
+| Border-radius seragam semua elemen | Variasi radius sesuai hierarki |
+
+---
+
+## 8 Aspek yang HARUS Ada di Prompt Kamu
+
+### 1. 🎯 Design System & Framework CSS
+
+Jangan hanya bilang "buat website bagus". Sebutkan **library/framework spesifik** yang menghasilkan output berkualitas:
+
+```
+Rekomendasi Library (pilih salah satu atau kombinasi):
+```
+
+| Library | Kegunaan | Kenapa Bagus |
+|---|---|---|
+| **Preline UI** | Component library | Komponen sudah polished, dark mode ready |
+| **Aceternity UI** | Animated components | Efek-efek modern (spotlight, meteors, aurora) |
+| **shadcn/ui** | Headless components | Clean, minimalis, sangat customizable |
+| **GSAP** | Animation library | Animasi scroll-based profesional |
+| **Locomotive Scroll** | Smooth scrolling | Efek parallax premium |
+| **Lenis** | Smooth scroll | Alternatif Locomotive yang lebih ringan |
+| **AOS (Animate On Scroll)** | Scroll animation | Mudah dipakai, efek reveal elegan |
+| **Swiper.js** | Slider/Carousel | Slider modern dengan efek keren |
+
+> [!TIP]
+> **Kombinasi terbaik untuk 1 file HTML**: Preline UI + AOS + Swiper.js. Ini sudah cukup untuk hasil yang sangat premium tanpa perlu build tools.
+
+---
+
+### 2. ✍️ Typography (SANGAT PENTING!)
+
+Typography adalah **50% dari kesan profesional**. Kamu sudah pakai Jost + Radley, itu bagus! Tapi ada aturannya:
+
+#### Rumus Typography Pairing:
+```
+Font Heading (Display/Serif) + Font Body (Sans-serif) + Font Accent (opsional)
+```
+
+#### Rekomendasi Pairing Premium:
+
+| Heading | Body | Vibe |
+|---|---|---|
+| **Playfair Display** | **Inter** | Elegant, editorial, luxury |
+| **Clash Display** (Fontshare) | **Satoshi** (Fontshare) | Modern, startup, tech |
+| **Fraunces** | **Outfit** | Warm, friendly, premium |
+| **Sora** | **DM Sans** | Clean, modern, SaaS |
+| **Cabinet Grotesk** (Fontshare) | **General Sans** (Fontshare) | Bold, agency, creative |
+| **Radley** | **Jost** | Classic, professional (punya kamu!) |
+| **Space Grotesk** | **Inter** | Tech, futuristic |
+| **Bricolage Grotesque** | **Geist** | Trendy 2024-2026, startup |
+
+> [!IMPORTANT]
+> **Di prompt, sebutkan SPESIFIK:**
+> - Font heading: `[nama font]`
+> - Font body: `[nama font]`
+> - Font weight yang dipakai: misalnya heading `700-900`, body `400-500`
+> - Letter-spacing: heading `-0.02em` (tighter), body `normal`
+> - Line-height: heading `1.1-1.2`, body `1.6-1.8`
+
+#### Contoh di prompt:
+```
+"Gunakan font Clash Display (weight 600-700) untuk heading dengan letter-spacing -0.03em 
+dan line-height 1.1, serta Satoshi (weight 400-500) untuk body text dengan line-height 1.7"
+```
+
+---
+
+### 3. 🎨 Warna (Jangan Generik!)
+
+#### ❌ Jangan bilang:
+```
+"gunakan warna biru dan putih"
+```
+
+#### ✅ Bilang seperti ini:
+```
+"Gunakan palet warna: background #0A0A0A (near-black), surface #141414, 
+accent utama #E8FF47 (electric lime), text primer #FAFAFA, text sekunder #888888, 
+border subtle rgba(255,255,255,0.06)"
+```
+
+#### Palet Warna Siap Pakai (Dark Mode):
+
+**1. Luxury Dark**
+| Role | Hex | Preview |
+|---|---|---|
+| Background | `#09090B` | Near black |
+| Surface | `#18181B` | Dark zinc |
+| Accent | `#D4AF37` | Gold |
+| Text | `#FAFAFA` | White |
+| Muted | `#71717A` | Gray |
+
+**2. Modern Tech**
+| Role | Hex | Preview |
+|---|---|---|
+| Background | `#030712` | Deep navy |
+| Surface | `#111827` | Dark slate |
+| Accent | `#818CF8` | Indigo soft |
+| Text | `#F9FAFB` | White |
+| Muted | `#6B7280` | Cool gray |
+
+**3. Vibrant Creative**
+| Role | Hex | Preview |
+|---|---|---|
+| Background | `#0C0A09` | Warm black |
+| Surface | `#1C1917` | Dark stone |
+| Accent | `#F97316` | Vibrant orange |
+| Secondary | `#7C3AED` | Purple |
+| Text | `#FAFAF9` | Warm white |
+
+**4. Clean Light Mode**
+| Role | Hex | Preview |
+|---|---|---|
+| Background | `#FAFAF9` | Warm white |
+| Surface | `#FFFFFF` | White |
+| Accent | `#2563EB` | Royal blue |
+| Text | `#18181B` | Near black |
+| Muted | `#A1A1AA` | Light gray |
+| Border | `#E4E4E7` | Subtle zinc |
+
+> [!TIP]
+> Dark mode biasanya terlihat lebih premium dan modern. Tapi light mode juga bisa terlihat sangat bagus kalau whitespace-nya dimanage dengan benar.
+
+---
+
+### 4. 📐 Layout & Spacing
+
+Ini yang paling sering bikin website terlihat AI: **spacing yang tidak intentional**.
+
+#### Sebutkan di prompt:
+```
+"Gunakan spacing system kelipatan 8px. Section padding 120px vertikal. 
+Max-width konten 1200px. Gunakan CSS Grid untuk layout utama. 
+Beri whitespace yang luas dan berani — jangan takut kosong. 
+Gunakan asymmetric grid (misalnya 5:7 atau 4:8 kolom) untuk section fitur, 
+bukan grid simetris 6:6."
+```
+
+#### Detail spesifik yang bisa disebut:
+
+| Aspek | Nilai Recommended | Catatan |
+|---|---|---|
+| Section padding | `100px - 160px` (vertical) | Semakin besar = semakin premium |
+| Container max-width | `1200px - 1400px` | Jangan full-width tanpa constraint |
+| Gap antar elemen | `24px - 48px` | Konsisten! |
+| Heading margin-bottom | `24px - 32px` | Jarak heading ke paragraf |
+| Card padding | `32px - 48px` | Card yang lapang terlihat mahal |
+| Border-radius cards | `16px - 24px` | Untuk cards/containers |
+| Border-radius buttons | `8px - 12px` atau `999px` (pill) | Pilih satu style, konsisten |
+
+---
+
+### 5. ✨ Animasi & Micro-Interactions
+
+#### Sebutkan di prompt:
+```
+"Tambahkan animasi scroll reveal menggunakan AOS library dengan delay bertahap 
+(staggered 100ms). Hover effect pada card: subtle scale(1.02) dengan shadow yang 
+membesar. Transisi halus 0.3s cubic-bezier(0.4, 0, 0.2, 1) untuk semua interactive 
+elements. Navbar blur backdrop-filter saat scroll. Smooth scroll behavior."
+```
+
+#### Animasi yang bikin premium:
+
+| Efek | Implementasi | Kesan |
+|---|---|---|
+| **Staggered reveal** | AOS dengan delay bertahap | Konten muncul satu-satu, terasa crafted |
+| **Parallax subtle** | `transform: translateY()` on scroll | Kedalaman visual |
+| **Cursor follower** | Custom cursor dengan delay | Interaktif, modern |
+| **Magnetic buttons** | Tombol yang sedikit "tertarik" ke cursor | Playful, premium |
+| **Text reveal** | Karakter/kata muncul satu-satu | Editorial, high-end |
+| **Blur navbar** | `backdrop-filter: blur(12px)` + transparency | Modern, glassmorphism |
+| **Gradient animation** | Background gradient yang bergerak pelan | Hidup, dinamis |
+| **Hover glow** | Box-shadow yang bercahaya saat hover | Futuristic |
+
+> [!WARNING]
+> Jangan overdo animasi! Pilih **3-5 jenis animasi** saja. Terlalu banyak animasi justru terlihat amatir.
+
+---
+
+### 6. 🧩 Komponen & Detail Visual
+
+#### Sebutkan detail ini di prompt:
+
+```
+"Untuk cards: gunakan border 1px solid rgba(255,255,255,0.06), background 
+semi-transparent, dan layered shadow. Untuk badges/tags: gunakan pill shape 
+dengan background accent/10 dan text accent. Untuk divider: gunakan gradient 
+line yang fade di kedua ujung, bukan garis solid. Untuk section background: 
+tambahkan subtle grain texture overlay dan radial gradient blob."
+```
+
+#### Detail yang membedakan pro vs AI:
+
+| Detail | AI-Look ❌ | Pro-Look ✅ |
+|---|---|---|
+| Card border | `border: 1px solid #333` | `border: 1px solid rgba(255,255,255,0.06)` |
+| Shadow | `box-shadow: 0 4px 6px rgba(0,0,0,0.1)` | Shadow berlapis 2-3 layer |
+| Background texture | Flat solid color | Grain overlay + gradient blobs |
+| Section divider | `<hr>` atau garis lurus | Gradient line fade atau wave SVG |
+| Button hover | Hanya ganti warna | Scale + shadow + glow |
+| Image treatment | Gambar kotak biasa | Rounded + border + subtle shadow |
+| Gradient usage | Gradient sebagai background utama | Gradient sebagai accent, subtle |
+
+#### Contoh Layered Shadow (premium look):
+```css
+box-shadow: 
+  0 1px 2px rgba(0,0,0,0.05),
+  0 4px 8px rgba(0,0,0,0.04),
+  0 16px 32px rgba(0,0,0,0.03);
+```
+
+---
+
+### 7. 📱 Responsiveness & Performance
+
+```
+"Website harus fully responsive dengan breakpoint: mobile (< 768px), tablet 
+(768px - 1024px), desktop (> 1024px). Gunakan clamp() untuk fluid typography. 
+Lazy load semua gambar. Optimasi untuk Core Web Vitals."
+```
+
+#### Fluid Typography contoh:
+```css
+/* Bukan ini: */
+h1 { font-size: 64px; }
+
+/* Tapi ini: */
+h1 { font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem); }
+```
+
+---
+
+### 8. 🖼️ Visual Assets & Imagery
+
+```
+"Untuk gambar placeholder, gunakan gambar dari Unsplash (source.unsplash.com). 
+Untuk ikon gunakan Lucide Icons atau Phosphor Icons (bukan Font Awesome yang 
+terlalu umum). Untuk ilustrasi dekoratif, gunakan gradient mesh blur atau 
+abstract shapes sebagai background accent."
+```
+
+| Aspek | Generik ❌ | Premium ✅ |
+|---|---|---|
+| Icons | Font Awesome | Lucide, Phosphor, Heroicons |
+| Images | Lorem Picsum | Unsplash curated |
+| Illustrations | Clip art / flat SVG | Gradient mesh / 3D abstract |
+| Logo placeholder | Text biasa | SVG dengan styling |
+
+---
+
+## 🔥 Template Prompt Siap Pakai (1 Paragraf)
+
+Berikut template yang bisa kamu copy-paste dan modifikasi:
+
+### Template 1: Landing Page Agency/Bisnis (Dark Mode)
+
+> Buatkan landing page modern untuk [NAMA BISNIS] yang bergerak di bidang [BIDANG]. Gunakan **Preline UI** sebagai component library, **AOS** untuk scroll animations (staggered delay 100ms), dan **Swiper.js** untuk testimonial slider. Font heading: **Clash Display** dari Fontshare (weight 600-700, letter-spacing -0.03em, line-height 1.1), font body: **Satoshi** dari Fontshare (weight 400-500, line-height 1.7). Palet warna dark mode: background `#09090B`, surface `#18181B`, accent `#818CF8`, text `#FAFAFA`, muted `#71717A`, border `rgba(255,255,255,0.06)`. Layout max-width 1280px, section padding 120px vertikal, gunakan asymmetric grid (5:7 ratio) untuk section fitur. Section yang dibutuhkan: (1) Hero dengan headline besar + subtext + 2 CTA buttons + abstract gradient blob sebagai dekorasi, (2) Logo clients marquee, (3) Features/Services dengan icon cards bergrid asymmetric, (4) Portfolio/showcase dengan image grid, (5) Testimonials slider, (6) CTA section, (7) Footer multi-column. Cards gunakan border `1px solid rgba(255,255,255,0.06)`, background `rgba(255,255,255,0.03)`, dan layered shadow. Navbar sticky dengan `backdrop-filter: blur(16px)` dan background semi-transparent. Semua hover effects gunakan `transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)` dengan subtle scale dan shadow. Icons dari **Lucide**. Gambar dari Unsplash. Tambahkan grain texture overlay pada background. Fluid typography dengan `clamp()`. Fully responsive. Jangan gunakan warna gradien generik — semua harus terlihat intentional dan editorial.
+
+### Template 2: Portfolio/Personal (Light Mode Clean)
+
+> Buatkan personal portfolio website untuk [NAMA] seorang [PROFESI]. Gunakan **Preline UI**, **AOS** (scroll reveal fade-up dengan stagger 150ms), dan **GSAP** untuk hero text animation. Font heading: **Playfair Display** (weight 700-900, letter-spacing -0.02em, line-height 1.1), font body: **Inter** (weight 400-500, line-height 1.7). Palet light mode: background `#FAFAF9`, surface `#FFFFFF`, accent `#18181B` (black as accent), secondary accent `#D97706` (amber), text `#1C1917`, muted `#A8A29E`, border `#E7E5E4`. Section padding 140px vertikal, max-width 1100px (lebih narrow = lebih editorial). Hero section: nama besar (font-size clamp(3rem, 8vw, 7rem)) dengan tagline subtle dan smooth text reveal animation. Section: (1) Hero editorial, (2) About dengan foto asymmetric layout (gambar 60% width, text 40%), (3) Selected Works / Projects dalam bento grid layout, (4) Skills/expertise horizontal scrolling marquee, (5) Testimonials, (6) Contact form minimalis, (7) Footer clean. Gunakan banyak whitespace — berani kosong. Cards tanpa shadow, hanya border subtle. Hover effect: underline animation pada link, slight image zoom pada project cards. Tambahkan horizontal lines sebagai section divider yang halus. Semua terasa editorial seperti majalah, bukan template.
+
+### Template 3: SaaS / Product (Glassmorphism Dark)
+
+> Buatkan landing page SaaS untuk produk [NAMA PRODUK] yang merupakan [DESKRIPSI SINGKAT]. Gunakan **Preline UI**, **AOS**, **GSAP ScrollTrigger** untuk parallax, dan **Swiper.js**. Font: **Space Grotesk** (heading, weight 600-700, letter-spacing -0.02em) + **Inter** (body, weight 400). Palet: background `#030712`, surface `rgba(255,255,255,0.05)`, accent gradient `linear-gradient(135deg, #6366F1, #8B5CF6, #EC4899)`, text `#F9FAFB`, muted `#9CA3AF`. Glassmorphism cards: `background: rgba(255,255,255,0.05)`, `backdrop-filter: blur(12px)`, `border: 1px solid rgba(255,255,255,0.08)`. Hero: headline besar + animated gradient text untuk keyword utama + mockup produk floating dengan glow effect + badge "✨ New Feature" pill shape. Tambahkan animated gradient orbs (blurred circles) yang bergerak pelan di background. Section: (1) Navbar sticky blur, (2) Hero dengan mockup, (3) Social proof logos, (4) 3 fitur utama bento grid, (5) How it works (3 steps), (6) Pricing 3 kolom dengan "Popular" highlight, (7) FAQ accordion, (8) Final CTA full-width gradient, (9) Footer. Setiap card punya hover glow effect `box-shadow: 0 0 40px rgba(99,102,241,0.15)`. Semua animasi smooth cubic-bezier. Responsive sempurna.
+
+---
+
+## ⚡ Checklist Sebelum Submit Prompt
+
+Pastikan prompt kamu sudah menyebut:
+
+- [ ] **Library CSS/JS** yang spesifik (Preline, AOS, Swiper, dll)
+- [ ] **2 Font** dengan weight, letter-spacing, dan line-height
+- [ ] **5+ warna** dengan hex code spesifik (background, surface, accent, text, muted, border)
+- [ ] **Spacing values** (section padding, max-width, gap)
+- [ ] **Jenis animasi** yang diinginkan (scroll reveal, hover, parallax)
+- [ ] **Detail komponen** (card style, button style, border treatment)
+- [ ] **Referensi visual style** (editorial, glassmorphism, bento grid, dll)
+- [ ] **Section breakdown** yang jelas dan terurut
+- [ ] **Keyword anti-generik**: "jangan generic", "editorial feel", "intentional spacing"
+- [ ] **Responsive** requirement
+
+---
+
+## 🚫 Kata-kata yang Harus DIHINDARI di Prompt
+
+| Jangan Bilang ❌ | Bilang Ini ✅ |
+|---|---|
+| "buat website yang bagus" | "buat website dengan aesthetic editorial, clean, dan modern" |
+| "pakai warna biru" | "pakai accent `#6366F1` (soft indigo) dengan background `#030712`" |
+| "tambahkan animasi" | "tambahkan AOS fade-up dengan stagger 100ms dan GSAP text reveal di hero" |
+| "buat responsive" | "responsive dengan fluid typography `clamp()` dan breakpoint mobile/tablet/desktop" |
+| "kasih shadow" | "layered shadow: `0 1px 2px, 0 4px 8px, 0 16px 32px` dengan opacity bertahap" |
+| "modern design" | "glassmorphism cards + gradient orbs + grain texture + asymmetric grid" |
+
+---
+
+## 💡 Pro Tips Tambahan
+
+1. **Sebut referensi website nyata**: "Dengan visual style mirip Linear.app / Vercel.com / Stripe.com" — ini memberi AI konteks yang sangat kuat tentang level kualitas yang kamu mau.
+
+2. **Gunakan font dari Fontshare**: Font dari [Fontshare](https://www.fontshare.com/) seperti Clash Display, Cabinet Grotesk, Satoshi, General Sans terlihat jauh lebih unik dibanding Google Fonts yang sudah terlalu common.
+
+3. **Sebut "bento grid"**: Layout bento (seperti grid iOS widgets) membuat section fitur terlihat jauh lebih modern dibanding grid biasa.
+
+4. **Minta grain texture**: `background-image: url("data:image/svg+xml,...")` atau CSS noise overlay memberi depth yang subtle.
+
+5. **Sebut easing function spesifik**: `cubic-bezier(0.4, 0, 0.2, 1)` terlihat jauh lebih natural dibanding `ease` atau `linear`.
+
+6. **Tambahkan "jangan generic"**: Kadang perlu disebut eksplisit agar AI tidak default ke pattern umum.
+
+7. **Minta warna dengan opacity**: `rgba(255,255,255,0.06)` untuk border dan `rgba(accent,0.1)` untuk badge background lebih halus dibanding warna solid.

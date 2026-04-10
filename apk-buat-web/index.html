@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Studio — Generate Website Prompts</title>
+    <meta name="description" content="Tool untuk generate prompt AI pembuatan website secara cepat dan terstruktur.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Subtle grain overlay -->
+    <div class="grain"></div>
+
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <span class="nav-logo">⬡</span>
+                <span class="nav-name">Prompt Studio</span>
+            </a>
+            <button class="nav-action" id="btnReset" type="button">Reset Form</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <p class="hero-badge">Website Prompt Generator</p>
+        <h1 class="hero-title">Buat prompt website<br>dalam hitungan detik.</h1>
+        <p class="hero-desc">Isi detail singkat, pilih opsi yang kamu mau, lalu generate prompt yang siap di-paste ke ChatGPT, Claude, atau Gemini.</p>
+    </section>
+
+    <!-- Form Area -->
+    <main class="main">
+        <div class="form-layout">
+
+            <!-- LEFT: Inputs -->
+            <div class="form-col">
+
+                <!-- 1. Info Dasar -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">01</span>
+                        Info Dasar
+                    </div>
+                    <div class="field">
+                        <label for="inputNama">Nama Website</label>
+                        <input type="text" id="inputNama" placeholder="Contoh: GALE Desain Konstruksi" spellcheck="false">
+                    </div>
+                    <div class="field">
+                        <label for="inputDesc">Deskripsi Singkat</label>
+                        <textarea id="inputDesc" rows="3" placeholder="Jelaskan secara singkat website ini tentang apa..."></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="inputTarget">Target Audiens</label>
+                        <input type="text" id="inputTarget" placeholder="Contoh: Pemilik rumah, developer properti">
+                    </div>
+                </div>
+
+                <!-- 2. Jenis Website -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">02</span>
+                        Jenis & Teknologi
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="selJenis">Jenis Website</label>
+                            <div class="sel-wrap">
+                                <select id="selJenis">
+                                    <option value="Landing Page">Landing Page</option>
+                                    <option value="Company Profile">Company Profile</option>
+                                    <option value="Portfolio">Portfolio</option>
+                                    <option value="E-Commerce / Toko Online">E-Commerce</option>
+                                    <option value="Blog / Magazine">Blog / Magazine</option>
+                                    <option value="SaaS / Web App">SaaS / Web App</option>
+                                    <option value="Event / Wedding">Event / Wedding</option>
+                                    <option value="Restoran / Cafe">Restoran / Cafe</option>
+                                    <option value="Real Estate / Properti">Real Estate</option>
+                                    <option value="Pendidikan / Kursus Online">Pendidikan / Kursus</option>
+                                    <option value="Personal Branding">Personal Branding</option>
+                                </select>
+                                <svg class="sel-icon" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="selTech">Teknologi</label>
+                            <div class="sel-wrap">
+                                <select id="selTech">
+                                    <option value="HTML, CSS, dan JavaScript murni (vanilla)">HTML + CSS + JS</option>
+                                    <option value="HTML, CSS (Tailwind CSS), dan JavaScript">Tailwind CSS + JS</option>
+                                    <option value="React.js dengan CSS Modules atau styled-components">React.js</option>
+                                    <option value="Next.js dengan Tailwind CSS">Next.js + Tailwind</option>
+                                    <option value="Vue.js dengan scoped CSS">Vue.js</option>
+                                    <option value="Vite + React dengan Tailwind CSS">Vite + React</option>
+                                    <option value="HTML + Bootstrap 5">Bootstrap 5</option>
+                                </select>
+                                <svg class="sel-icon" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Teknologi UI / Viral -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">03</span>
+                        Teknologi UI / Viral
+                    </div>
+                    <div class="chip-grid">
+                        <label class="chip"><input type="checkbox" value="Aceternity UI" class="cb-ui"><span>Aceternity UI</span></label>
+                        <label class="chip"><input type="checkbox" value="Preline UI" class="cb-ui"><span>Preline UI</span></label>
+                        <label class="chip"><input type="checkbox" value="Shadcn UI" class="cb-ui"><span>Shadcn UI</span></label>
+                        <label class="chip"><input type="checkbox" value="Magic UI" class="cb-ui"><span>Magic UI</span></label>
+                        <label class="chip"><input type="checkbox" value="DaisyUI" class="cb-ui"><span>DaisyUI</span></label>
+                        <label class="chip"><input type="checkbox" value="Flowbite" class="cb-ui"><span>Flowbite</span></label>
+                        <label class="chip"><input type="checkbox" value="Chakra UI" class="cb-ui"><span>Chakra UI</span></label>
+                        <label class="chip"><input type="checkbox" value="NextUI" class="cb-ui"><span>NextUI</span></label>
+                        <label class="chip"><input type="checkbox" value="Material UI" class="cb-ui"><span>Material UI</span></label>
+                        <label class="chip"><input type="checkbox" value="HyperUI" class="cb-ui"><span>HyperUI</span></label>
+                    </div>
+                </div>
+
+                <!-- 4. Gaya Desain -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">04</span>
+                        Gaya Desain
+                    </div>
+                    <div class="chip-grid">
+                        <label class="chip"><input type="checkbox" value="Modern & Minimalis" class="cb-style" checked><span>Modern & Minimalis</span></label>
+                        <label class="chip"><input type="checkbox" value="Glassmorphism" class="cb-style"><span>Glassmorphism</span></label>
+                        <label class="chip"><input type="checkbox" value="Neumorphism" class="cb-style"><span>Neumorphism</span></label>
+                        <label class="chip"><input type="checkbox" value="Dark Mode" class="cb-style"><span>Dark Mode</span></label>
+                        <label class="chip"><input type="checkbox" value="Colorful & Vibrant" class="cb-style"><span>Colorful & Vibrant</span></label>
+                        <label class="chip"><input type="checkbox" value="Elegant & Luxury" class="cb-style"><span>Elegant & Luxury</span></label>
+                        <label class="chip"><input type="checkbox" value="Retro / Vintage" class="cb-style"><span>Retro / Vintage</span></label>
+                        <label class="chip"><input type="checkbox" value="Flat Design" class="cb-style"><span>Flat Design</span></label>
+                        <label class="chip"><input type="checkbox" value="3D / Isometric" class="cb-style"><span>3D / Isometric</span></label>
+                        <label class="chip"><input type="checkbox" value="Brutalism" class="cb-style"><span>Brutalism</span></label>
+                        <label class="chip"><input type="checkbox" value="Editorial / Magazine" class="cb-style"><span>Editorial / Magazine</span></label>
+                        <label class="chip"><input type="checkbox" value="Organic / Nature" class="cb-style"><span>Organic / Nature</span></label>
+                    </div>
+                </div>
+
+                <!-- 5. Warna -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">05</span>
+                        Warna
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="selSkema">Skema Warna</label>
+                            <div class="sel-wrap">
+                                <select id="selSkema">
+                                    <option value="Pastel (warna lembut dan soft)">Pastel</option>
+                                    <option value="Monochromatic (satu warna dengan variasi tone)">Monochromatic</option>
+                                    <option value="Analogous (warna berdekatan, harmonis)">Analogous</option>
+                                    <option value="Complementary (warna berlawanan, kontras)">Complementary</option>
+                                    <option value="Earth Tones (coklat, hijau, krem, alam)">Earth Tones</option>
+                                    <option value="Bold & Bright (mencolok dan cerah)">Bold & Bright</option>
+                                    <option value="Black & Gold (hitam aksen emas, mewah)">Black & Gold</option>
+                                    <option value="Gradient Modern (gradien multi-warna smooth)">Gradient Modern</option>
+                                    <option value="Triadic (3 warna seimbang di color wheel)">Triadic</option>
+                                </select>
+                                <svg class="sel-icon" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="selPrimer">Warna Primer</label>
+                            <div class="sel-wrap">
+                                <select id="selPrimer">
+                                    <option value="putih">Putih</option>
+                                    <option value="hitam">Hitam</option>
+                                    <option value="biru navy">Biru Navy</option>
+                                    <option value="biru muda">Biru Muda</option>
+                                    <option value="hijau emerald">Hijau Emerald</option>
+                                    <option value="hijau sage">Hijau Sage</option>
+                                    <option value="merah maroon">Merah Maroon</option>
+                                    <option value="ungu lavender">Ungu Lavender</option>
+                                    <option value="gold / emas">Gold / Emas</option>
+                                    <option value="abu-abu slate">Abu-abu Slate</option>
+                                    <option value="krem / cream">Krem / Cream</option>
+                                    <option value="teal / cyan">Teal / Cyan</option>
+                                    <option value="coral / salmon">Coral / Salmon</option>
+                                    <option value="coklat warm">Coklat Warm</option>
+                                </select>
+                                <svg class="sel-icon" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="selSekunder">Warna Sekunder</label>
+                        <div class="sel-wrap">
+                            <select id="selSekunder">
+                                <option value="biru">Biru</option>
+                                <option value="hitam">Hitam</option>
+                                <option value="putih">Putih</option>
+                                <option value="hijau mint">Hijau Mint</option>
+                                <option value="kuning emas">Kuning Emas</option>
+                                <option value="merah bata">Merah Bata</option>
+                                <option value="ungu deep">Ungu Deep</option>
+                                <option value="pink rose">Pink Rose</option>
+                                <option value="orange amber">Orange Amber</option>
+                                <option value="teal dark">Teal Dark</option>
+                                <option value="abu-abu charcoal">Abu-abu Charcoal</option>
+                                <option value="coklat mocha">Coklat Mocha</option>
+                            </select>
+                            <svg class="sel-icon" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Font -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">06</span>
+                        Font
+                    </div>
+                    <div class="field">
+                        <label for="inputFont">Google Fonts Link</label>
+                        <input type="text" id="inputFont" placeholder="Paste link dari fonts.google.com/share?...">
+                        <span class="field-hint">Buka Google Fonts → Pilih font → Klik Share → Copy link, paste di sini</span>
+                    </div>
+                </div>
+
+                <!-- 7. Section Website -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">07</span>
+                        Section Website
+                    </div>
+                    <div class="chip-grid">
+                        <label class="chip"><input type="checkbox" value="Hero Section dengan headline besar dan CTA button" class="cb-sec" checked><span>Hero Section</span></label>
+                        <label class="chip"><input type="checkbox" value="Navbar / Navigation Bar yang sticky di atas" class="cb-sec" checked><span>Navbar</span></label>
+                        <label class="chip"><input type="checkbox" value="About Us / Tentang Kami" class="cb-sec"><span>About Us</span></label>
+                        <label class="chip"><input type="checkbox" value="Services / Layanan yang ditawarkan dengan icon" class="cb-sec"><span>Services</span></label>
+                        <label class="chip"><input type="checkbox" value="Portfolio / Gallery Proyek dengan grid layout" class="cb-sec"><span>Portfolio</span></label>
+                        <label class="chip"><input type="checkbox" value="Testimonial / Review dari klien" class="cb-sec"><span>Testimonial</span></label>
+                        <label class="chip"><input type="checkbox" value="Pricing / Paket Harga dengan card compare" class="cb-sec"><span>Pricing</span></label>
+                        <label class="chip"><input type="checkbox" value="Team / Tim Kami" class="cb-sec"><span>Team</span></label>
+                        <label class="chip"><input type="checkbox" value="FAQ / Pertanyaan yang Sering Diajukan (accordion)" class="cb-sec"><span>FAQ</span></label>
+                        <label class="chip"><input type="checkbox" value="Contact Form / Formulir Kontak" class="cb-sec"><span>Contact</span></label>
+                        <label class="chip"><input type="checkbox" value="Blog / Artikel Terbaru" class="cb-sec"><span>Blog</span></label>
+                        <label class="chip"><input type="checkbox" value="Footer dengan navigasi, kontak, dan sosial media" class="cb-sec" checked><span>Footer</span></label>
+                        <label class="chip"><input type="checkbox" value="CTA (Call to Action) Section terpisah" class="cb-sec"><span>CTA Section</span></label>
+                        <label class="chip"><input type="checkbox" value="Stats / Counter Angka Pencapaian" class="cb-sec"><span>Stats</span></label>
+                        <label class="chip"><input type="checkbox" value="Partner / Client Logos marquee" class="cb-sec"><span>Client Logos</span></label>
+                        <label class="chip"><input type="checkbox" value="Newsletter / Subscribe email" class="cb-sec"><span>Newsletter</span></label>
+                        <label class="chip"><input type="checkbox" value="Google Maps embed lokasi" class="cb-sec"><span>Map</span></label>
+                        <label class="chip"><input type="checkbox" value="Video Showcase / Embed YouTube" class="cb-sec"><span>Video</span></label>
+                    </div>
+                </div>
+
+                <!-- 8. Fitur -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">08</span>
+                        Fitur Tambahan
+                    </div>
+                    <div class="chip-grid">
+                        <label class="chip"><input type="checkbox" value="Responsive Design (tampil baik di mobile, tablet, desktop)" class="cb-feat" checked><span>Responsive</span></label>
+                        <label class="chip"><input type="checkbox" value="Scroll animation (fade-in, slide-up saat elemen muncul)" class="cb-feat"><span>Scroll Animation</span></label>
+                        <label class="chip"><input type="checkbox" value="Hover effects dan micro-interactions pada tombol dan card" class="cb-feat"><span>Hover Effects</span></label>
+                        <label class="chip"><input type="checkbox" value="Dark / Light Mode Toggle" class="cb-feat"><span>Dark/Light Toggle</span></label>
+                        <label class="chip"><input type="checkbox" value="Parallax scrolling effect" class="cb-feat"><span>Parallax</span></label>
+                        <label class="chip"><input type="checkbox" value="Lazy loading gambar" class="cb-feat"><span>Lazy Loading</span></label>
+                        <label class="chip"><input type="checkbox" value="Smooth scroll navigation antar section" class="cb-feat"><span>Smooth Scroll</span></label>
+                        <label class="chip"><input type="checkbox" value="Image Slider / Carousel" class="cb-feat"><span>Image Slider</span></label>
+                        <label class="chip"><input type="checkbox" value="Lightbox gallery untuk gambar" class="cb-feat"><span>Lightbox</span></label>
+                        <label class="chip"><input type="checkbox" value="Loading screen / preloader animasi" class="cb-feat"><span>Preloader</span></label>
+                        <label class="chip"><input type="checkbox" value="WhatsApp floating button" class="cb-feat"><span>WhatsApp Button</span></label>
+                        <label class="chip"><input type="checkbox" value="Back to top button" class="cb-feat"><span>Back to Top</span></label>
+                        <label class="chip"><input type="checkbox" value="SEO optimized (meta tags, Open Graph, structured data)" class="cb-feat"><span>SEO Optimized</span></label>
+                        <label class="chip"><input type="checkbox" value="Multi-bahasa (Indonesia & English)" class="cb-feat"><span>Multi-bahasa</span></label>
+                    </div>
+                </div>
+
+                <!-- 9. Pengaturan Output -->
+                <div class="section">
+                    <div class="section-label">
+                        <span class="section-num">09</span>
+                        Pengaturan Output
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="selTujuan">Tujuan Prompt</label>
+                            <div class="sel-wrap">
+                                <select id="selTujuan">
+                                    <option value="website">Langsung Buat Website</option>
+                                    <option value="pd">Buat Project Document (PD)</option>
+                                </select>
+                                <svg class="sel-icon" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="selBahasa">Bahasa Prompt</label>
+                            <div class="sel-wrap">
+                                <select id="selBahasa">
+                                    <option value="id">Bahasa Indonesia</option>
+                                    <option value="en">English</option>
+                                </select>
+                                <svg class="sel-icon" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generate -->
+                <button class="btn-gen" id="btnGenerate" type="button">
+                    Generate Prompt
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+
+            </div>
+
+            <!-- RIGHT: Output -->
+            <div class="form-col">
+                <div class="output-wrap">
+                    <div class="output-card" id="outputCard">
+                        <div class="output-bar">
+                            <div class="output-dots">
+                                <i></i><i></i><i></i>
+                            </div>
+                            <span class="output-title">prompt.txt</span>
+                            <div class="output-btns">
+                                <button class="out-btn" id="btnCopy" disabled>Copy</button>
+                                <button class="out-btn" id="btnDownload" disabled>Download</button>
+                            </div>
+                        </div>
+                        <div class="output-body" id="outputBody">
+                            <div class="output-empty" id="outputEmpty">
+                                <div class="empty-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                                </div>
+                                <p>Isi form di samping, lalu klik <strong>Generate Prompt</strong></p>
+                            </div>
+                            <pre class="output-pre" id="outputPre"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span id="toastMsg">Copied!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALE Desain Konstruksi | Arsitek & Kontraktor Profesional di Mataram</title>
+    <meta name="description" content="Biro arsitektur dan jasa konstruksi terpercaya di Mataram NTB. Desain rumah modern, ruko, villa, dan proyek komersial. Konsultasi gratis!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config & Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#FFFFFF',
+                        primary: '#F8F9FA',
+                        secondary: '#4A90D9',
+                        bluelight: '#EBF4FF',
+                        bluedeep: '#1E3A5F',
+                        textdark: '#1A1A2E',
+                        textmuted: '#6B7280',
+                    },
+                    fontFamily: {
+                        heading: ['"Cormorant Garamond"', 'serif'],
+                        body: ['"Jost"', 'sans-serif'],
+                        accent: ['"Radley"', 'serif'],
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                        fadein: 'fadeIn 1s ease-out',
+                        slideup: 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glassmorphism-dark {
+            background: rgba(30, 58, 95, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Lightbox */
+        #lightbox { display: none; }
+        #lightbox.open { display: flex; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F8F9FA; }
+        ::-webkit-scrollbar-thumb { background: #4A90D9; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1E3A5F; }
+    </style>
+    
+</head>
+<body class="font-body text-[#1A1A2E] bg-[#F8F9FA] antialiased overflow-x-hidden">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-[#1E3A5F] z-[9999] flex justify-center items-center transition-opacity duration-500">
+        <h1 class="font-heading text-white text-5xl font-bold animate-pulse">GALE.</h1>
+    </div>
+
+    <!-- MAIN CONTENT START -->
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-md border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-heading font-bold text-2xl text-bluedeep">GALE.<span class="text-secondary text-sm block -mt-1 font-body font-normal">Desain Konstruksi</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-textdark hover:text-secondary transition font-body text-sm font-medium">Beranda</a>
+                    <a href="#tentang" class="text-textdark hover:text-secondary transition font-body text-sm font-medium">Tentang</a>
+                    <a href="#layanan" class="text-textdark hover:text-secondary transition font-body text-sm font-medium">Layanan</a>
+                    <a href="#portofolio" class="text-textdark hover:text-secondary transition font-body text-sm font-medium">Portofolio</a>
+                    <a href="#harga" class="text-textdark hover:text-secondary transition font-body text-sm font-medium">Harga</a>
+                    <a href="#tim" class="text-textdark hover:text-secondary transition font-body text-sm font-medium">Tim</a>
+                    <a href="#kontak" class="text-textdark hover:text-secondary transition font-body text-sm font-medium">Kontak</a>
+                    <a href="#kontak" class="bg-secondary text-white px-6 py-2.5 rounded-full hover:bg-bluedeep transition font-body text-sm font-medium shadow-lg hover:shadow-xl">Konsultasi Gratis</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-textdark hover:text-secondary focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#beranda" class="block px-3 py-3 text-base font-medium text-textdark hover:text-secondary hover:bg-bluelight rounded-md">Beranda</a>
+                <a href="#tentang" class="block px-3 py-3 text-base font-medium text-textdark hover:text-secondary hover:bg-bluelight rounded-md">Tentang</a>
+                <a href="#layanan" class="block px-3 py-3 text-base font-medium text-textdark hover:text-secondary hover:bg-bluelight rounded-md">Layanan</a>
+                <a href="#portofolio" class="block px-3 py-3 text-base font-medium text-textdark hover:text-secondary hover:bg-bluelight rounded-md">Portofolio</a>
+                <a href="#harga" class="block px-3 py-3 text-base font-medium text-textdark hover:text-secondary hover:bg-bluelight rounded-md">Harga</a>
+                <a href="#tim" class="block px-3 py-3 text-base font-medium text-textdark hover:text-secondary hover:bg-bluelight rounded-md">Tim</a>
+                <a href="#kontak" class="block px-3 py-3 text-base font-medium text-textdark hover:text-secondary hover:bg-bluelight rounded-md">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Parallax BG -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://placehold.co/1920x1080/1E3A5F/FFFFFF?text=Premium+Architecture" alt="GALE Architecture" class="w-full h-full object-cover" id="hero-img">
+            <div class="absolute inset-0 bg-gradient-to-r from-bluedeep/90 to-secondary/60"></div>
+            <!-- Spotlight Effect overlay -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(74,144,217,0.15)_0%,transparent_60%)]"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16">
+            <div class="inline-block glassmorphism px-4 py-1.5 rounded-full mb-6 reveal">
+                <span class="text-white text-sm font-medium tracking-wider uppercase"><i class="ph ph-shield-check text-secondary mr-1 animate-pulse"></i> Terpercaya sejak 2015</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight reveal" style="transition-delay: 200ms;">
+                Wujudkan Hunian Impian <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-bluelight">Berkualitas Presisi</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-body font-light reveal" style="transition-delay: 400ms;">
+                Biro arsitektur dan jasa konstruksi terpercaya di Kota Mataram. Desain modern, fungsional, dan pembangunan presisi untuk segala kebutuhan properti Anda.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal" style="transition-delay: 600ms;">
+                <a href="#portofolio" class="bg-secondary text-white px-8 py-3.5 rounded-full font-medium hover:bg-white hover:text-bluedeep transition-all duration-300 shadow-[0_0_15px_rgba(74,144,217,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)]">Lihat Portofolio</a>
+                <a href="#kontak" class="glassmorphism text-white px-8 py-3.5 rounded-full font-medium hover:bg-white/20 transition-all duration-300">Hubungi Kami <i class="ph-bold ph-arrow-right ml-1"></i></a>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-white/20 pt-8 reveal" style="transition-delay: 800ms;">
+                <div>
+                    <h3 class="text-3xl font-heading font-bold text-white"><span class="counter" data-target="150">0</span>+</h3>
+                    <p class="text-sm text-bluelight font-body opacity-80">Proyek Selesai</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-heading font-bold text-white"><span class="counter" data-target="10">0</span> Tahun</h3>
+                    <p class="text-sm text-bluelight font-body opacity-80">Pengalaman</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-heading font-bold text-white"><span class="counter" data-target="50">0</span>+</h3>
+                    <p class="text-sm text-bluelight font-body opacity-80">Klien Puas</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-heading font-bold text-white"><span class="counter" data-target="12">0</span></h3>
+                    <p class="text-sm text-bluelight font-body opacity-80">Tim Profesional</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down indicator -->
+        <a href="#tentang" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-white animate-bounce">
+            <i class="ph ph-mouse-simple text-3xl opacity-70 hover:opacity-100 transition"></i>
+        </a>
+    </section>
+    <!-- Marquee -->
+    <section class="py-10 bg-white border-b border-gray-100 overflow-hidden relative">
+        <div class="absolute w-20 h-full left-0 top-0 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div class="absolute w-20 h-full right-0 top-0 bg-gradient-to-l from-white to-transparent z-10"></div>
+        <div class="flex whitespace-nowrap animate-[marquee_25s_linear_infinite] group">
+            <div class="flex space-x-12 px-6 items-center w-max group-hover:[animation-play-state:paused]">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+1" alt="Partner 1" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+2" alt="Partner 2" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+3" alt="Partner 3" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+4" alt="Partner 4" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+5" alt="Partner 5" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+1" alt="Partner 1" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+2" alt="Partner 2" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+3" alt="Partner 3" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+4" alt="Partner 4" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+                <img src="https://placehold.co/120x60/F8F9FA/6B7280?text=Partner+5" alt="Partner 5" class="h-12 opacity-60 hover:opacity-100 transition grayscale hover:grayscale-0">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="tentang" class="py-24 bg-primary reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-secondary/20 to-bluelight rounded-2xl animate-[blob_7s_infinite]"></div>
+                    <img src="https://placehold.co/800x1000/EBF4FF/1E3A5F?text=GALE+Office" alt="Tentang GALE" class="relative rounded-xl shadow-2xl object-cover h-[500px] w-full">
+                    <div class="absolute -bottom-6 -right-6 glassmorphism-dark p-6 rounded-xl shadow-xl max-w-xs">
+                        <p class="text-white font-heading text-lg">"Membangun dengan hati, menyelesaikan dengan presisi."</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h5 class="text-secondary font-medium tracking-wide uppercase font-body text-sm mb-2">Tentang Kami</h5>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-bluedeep mb-6">Mitra Terbaik Konstruksi di Mataram</h2>
+                    <p class="text-textmuted font-body text-lg mb-6 leading-relaxed">
+                        GALE Desain Konstruksi telah mendedikasikan diri untuk merancang dan membangun ruang yang bermakna. Dari rumah tinggal berdesain minimalis hingga villa mewah dan fasilitas komersial, kami adalah perpaduan antara seni arsitektur dan ilmu rekayasa konstruksi.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="ph-fill ph-check-circle text-secondary text-xl mr-3 mt-1"></i>
+                            <span class="text-textdark font-body">Material berkualitas dan tahan lama standar SNI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph-fill ph-check-circle text-secondary text-xl mr-3 mt-1"></i>
+                            <span class="text-textdark font-body">Manajemen waktu proyek yang terstruktur</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ph-fill ph-check-circle text-secondary text-xl mr-3 mt-1"></i>
+                            <span class="text-textdark font-body">Transparansi RAB tanpa biaya tersembunyi</span>
+                        </li>
+                    </ul>
+                    <a href="#layanan" class="inline-flex items-center text-bluedeep font-body font-semibold border-b-2 border-secondary pb-1 hover:text-secondary transition">
+                        Pelajari Layanan Kami <i class="ph-bold ph-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="layanan" class="py-24 bg-bluelight reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h5 class="text-secondary font-medium tracking-wide uppercase font-body text-sm mb-2">Layanan Utama</h5>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-bluedeep mb-6">Solusi Konstruksi End-to-End</h2>
+                <p class="text-textmuted font-body text-lg">Kami mendampingi setiap tahap proyek Anda, dari konsep coretan di atas kertas hingga penyerahan kunci.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="w-14 h-14 bg-bluelight rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-compass-tool text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-bluedeep mb-3">Desain Arsitektur</h3>
+                    <p class="text-textmuted font-body">Perencanaan desain fungsional dan estetis untuk rumah, ruko, atau properti komersial yang modern.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="w-14 h-14 bg-bluelight rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-buildings text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-bluedeep mb-3">Konstruksi Bangunan</h3>
+                    <p class="text-textmuted font-body">Pengerjaan struktur bangunan dengan material berkualitas, tukang ahli, dan diawasi langsung oleh Civil Engineer.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="w-14 h-14 bg-bluelight rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-hammer text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-bluedeep mb-3">Renovasi & Retrofit</h3>
+                    <p class="text-textmuted font-body">Pembaruan struktur, perbaikan fasad, hingga perbaikan fungsi ruang mengikuti tren terbaru.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="w-14 h-14 bg-bluelight rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-armchair text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-bluedeep mb-3">Desain Interior</h3>
+                    <p class="text-textmuted font-body">Pengaturan tata letak dan pemilihan furnitur untuk menciptakan suasana ruang dalam yang nyaman.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="w-14 h-14 bg-bluelight rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-handshake text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-bluedeep mb-3">Konsultasi Proyek</h3>
+                    <p class="text-textmuted font-body">Bantuan teknis dan estimasi biaya awal sebelum Anda memutuskan untuk membangun.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="w-14 h-14 bg-bluelight rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-clipboard-text text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-bluedeep mb-3">Manajemen Konstruksi</h3>
+                    <p class="text-textmuted font-body">Pengawasan jadwal, budget, dan kualitas di lapangan untuk memastikan proyek berjalan sesuai rencana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portofolio" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <h5 class="text-secondary font-medium tracking-wide uppercase font-body text-sm mb-2">Karya Kami</h5>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-bluedeep mb-4">Portofolio Pilihan Ciptaan GALE</h2>
+                </div>
+                <!-- Filter Buttons -->
+                <div class="flex space-x-2 mt-6 md:mt-0 overflow-x-auto pb-2 w-full md:w-auto hide-scroll">
+                    <button class="portfolio-filter active px-5 py-2 rounded-full text-sm font-body border border-bluedeep bg-bluedeep text-white transition" data-filter="all">Semua</button>
+                    <button class="portfolio-filter px-5 py-2 rounded-full text-sm font-body border border-gray-300 text-textmuted hover:border-secondary hover:text-secondary transition" data-filter="rumah">Rumah</button>
+                    <button class="portfolio-filter px-5 py-2 rounded-full text-sm font-body border border-gray-300 text-textmuted hover:border-secondary hover:text-secondary transition" data-filter="villa">Villa</button>
+                    <button class="portfolio-filter px-5 py-2 rounded-full text-sm font-body border border-gray-300 text-textmuted hover:border-secondary hover:text-secondary transition" data-filter="komersial">Komersial</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                <!-- Item 1 -->
+                <div class="portfolio-item group relative overflow-hidden rounded-2xl h-80 filter-rumah">
+                    <img src="https://placehold.co/600x800/EBF4FF/1E3A5F?text=Rumah+Minimalis" alt="Rumah Tinggal" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bluedeep/90 via-bluedeep/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-secondary font-body text-sm mb-1">Rumah Tinggal</span>
+                        <h3 class="text-white font-heading text-2xl font-bold mb-2">Modern Minimalis Ampenan</h3>
+                        <p class="text-gray-300 font-body text-sm mb-4">Selesai 2024</p>
+                        <button class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-white hover:text-bluedeep transition" onclick="openLightbox('https://placehold.co/1200x800/EBF4FF/1E3A5F?text=Rumah+Minimalis')"><i class="ph ph-corners-out"></i></button>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="portfolio-item group relative overflow-hidden rounded-2xl h-80 filter-villa">
+                    <img src="https://placehold.co/600x800/EBF4FF/1E3A5F?text=Villa+Senggigi" alt="Villa" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bluedeep/90 via-bluedeep/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-secondary font-body text-sm mb-1">Villa Retreat</span>
+                        <h3 class="text-white font-heading text-2xl font-bold mb-2">Senggigi Ocean View</h3>
+                        <p class="text-gray-300 font-body text-sm mb-4">Selesai 2025</p>
+                        <button class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-white hover:text-bluedeep transition" onclick="openLightbox('https://placehold.co/1200x800/EBF4FF/1E3A5F?text=Villa+Senggigi')"><i class="ph ph-corners-out"></i></button>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="portfolio-item group relative overflow-hidden rounded-2xl h-80 lg:row-span-2 filter-komersial">
+                    <img src="https://placehold.co/600x1200/EBF4FF/1E3A5F?text=Cafe+Mataram" alt="Cafe" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bluedeep/90 via-bluedeep/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-secondary font-body text-sm mb-1">Komersial</span>
+                        <h3 class="text-white font-heading text-2xl font-bold mb-2">Industrial Cafe Udayana</h3>
+                        <p class="text-gray-300 font-body text-sm mb-4">Selesai 2023</p>
+                        <button class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-white hover:text-bluedeep transition" onclick="openLightbox('https://placehold.co/1200x1600/EBF4FF/1E3A5F?text=Cafe+Mataram')"><i class="ph ph-corners-out"></i></button>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="portfolio-item group relative overflow-hidden rounded-2xl h-80 filter-rumah">
+                    <img src="https://placehold.co/600x800/EBF4FF/1E3A5F?text=Rumah+Tropis" alt="Rumah" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bluedeep/90 via-bluedeep/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-secondary font-body text-sm mb-1">Rumah Tinggal</span>
+                        <h3 class="text-white font-heading text-2xl font-bold mb-2">Classic Tropis Cakranegara</h3>
+                        <p class="text-gray-300 font-body text-sm mb-4">Selesai 2024</p>
+                        <button class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-white hover:text-bluedeep transition" onclick="openLightbox('https://placehold.co/1200x800/EBF4FF/1E3A5F?text=Rumah+Tropis')"><i class="ph ph-corners-out"></i></button>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="portfolio-item group relative overflow-hidden rounded-2xl h-80 filter-komersial">
+                    <img src="https://placehold.co/600x800/EBF4FF/1E3A5F?text=Ruko+Bisnis" alt="Ruko" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bluedeep/90 via-bluedeep/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-secondary font-body text-sm mb-1">Komersial</span>
+                        <h3 class="text-white font-heading text-2xl font-bold mb-2">Ruko 3 Lantai Pejanggik</h3>
+                        <p class="text-gray-300 font-body text-sm mb-4">Selesai 2022</p>
+                        <button class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-white hover:text-bluedeep transition" onclick="openLightbox('https://placehold.co/1200x800/EBF4FF/1E3A5F?text=Ruko+Bisnis')"><i class="ph ph-corners-out"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial -->
+    <section class="py-24 bg-bluelight relative overflow-hidden reveal">
+        <div class="absolute inset-0 bg-gradient-to-b from-white to-transparent top-0 h-32"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <i class="ph-fill ph-quotes text-5xl text-secondary opacity-30 mb-4 inline-block"></i>
+                <h2 class="text-4xl font-heading font-bold text-bluedeep">Apa Kata Klien Kami</h2>
+            </div>
+            
+            <div class="flex overflow-x-auto space-x-6 pb-8 hide-scroll snap-x">
+                <!-- Testimonial 1 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-white/50 glassmorphism snap-center">
+                    <div class="flex text-amber-400 mb-4 text-lg">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-textdark font-body italic mb-6">"Desain rumah minimalis yang dikerjakan GALE sangat sesuai dengan harapan kami. Prosesnya transparan dan tukangnya terampil."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100x100/EBF4FF/1E3A5F?text=B" alt="Bapak Budi" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-heading font-bold text-bluedeep">Bapak Budi</h4>
+                            <p class="font-body text-xs text-textmuted">Pemilik Rumah, Ampenan</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-white/50 glassmorphism snap-center">
+                    <div class="flex text-amber-400 mb-4 text-lg">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-textdark font-body italic mb-6">"Proyek cafe kami selesai tepat waktu. Sangat puas dengan hasil dan konsultasi awal yang diberikan."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100x100/EBF4FF/1E3A5F?text=S" alt="Ibu Siti" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-heading font-bold text-bluedeep">Ibu Siti</h4>
+                            <p class="font-body text-xs text-textmuted">Owner Cafe, Mataram</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-white/50 glassmorphism snap-center">
+                    <div class="flex text-amber-400 mb-4 text-lg">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-textdark font-body italic mb-6">"Membangun villa di Lombok jadi tenang karena dipercayakan ke tim yang tepat. Desain mewah, struktur kuat."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/100x100/EBF4FF/1E3A5F?text=A" alt="Bapak Andi" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-heading font-bold text-bluedeep">Bapak Andi</h4>
+                            <p class="font-body text-xs text-textmuted">Investor, Senggigi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="harga" class="py-24 bg-primary reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h5 class="text-secondary font-medium tracking-wide uppercase font-body text-sm mb-2">Paket Harga</h5>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-bluedeep mb-6">Transparan & Menyesuaikan Budget</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Basic -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transform hover:-translate-y-2 transition-all">
+                    <h3 class="font-heading text-2xl font-bold text-bluedeep mb-2">Desain Saja</h3>
+                    <p class="text-textmuted font-body mb-6">Paket lengkap gambar kerja untuk diserahkan ke tukang Anda.</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-heading font-bold text-textdark">Mulai Rp 50K</span><span class="text-textmuted">/m²</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 font-body text-sm text-textdark">
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Gambar Denah & Tampak</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Gambar Kerja (Struktur & MEP)</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Rencana Anggaran Biaya (RAB)</li>
+                        <li class="flex items-center text-gray-400"><i class="ph ph-x-circle mr-2"></i> Animasi 3D</li>
+                    </ul>
+                    <a href="#kontak" class="block w-full text-center py-3 rounded-full border border-secondary text-secondary font-medium hover:bg-secondary hover:text-white transition">Pilih Paket</a>
+                </div>
+                
+                <!-- Standard (Popular) -->
+                <div class="bg-bluedeep p-8 rounded-2xl shadow-xl transform scale-100 md:scale-105 relative z-10 text-white">
+                    <div class="absolute top-0 right-0 bg-secondary text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl uppercase tracking-wide">Terpopuler</div>
+                    <h3 class="font-heading text-2xl font-bold mb-2">Borongan Plus</h3>
+                    <p class="text-gray-300 font-body mb-6">Pekerjaan dari desain hingga bangunan berdiri kokoh.</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-heading font-bold">Mulai Rp 3.5Jt</span><span class="text-gray-400">/m²</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 font-body text-sm text-gray-200">
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Gratis Desain 3D</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Material Standar SNI</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Tenaga Kerja Profesional</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Garansi Pemeliharaan 3 Bulan</li>
+                    </ul>
+                    <a href="#kontak" class="block w-full text-center py-3 rounded-full bg-secondary text-white font-medium hover:bg-white hover:text-bluedeep transition shadow-[0_0_15px_rgba(74,144,217,0.5)]">Konsultasi Dulu</a>
+                </div>
+                
+                <!-- Premium -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transform hover:-translate-y-2 transition-all">
+                    <h3 class="font-heading text-2xl font-bold text-bluedeep mb-2">Turnkey / Kunci Terima</h3>
+                    <p class="text-textmuted font-body mb-6">Terima beres, termasuk interior dan siap dihuni.</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-heading font-bold text-textdark">Mulai Rp 5.5Jt</span><span class="text-textmuted">/m²</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 font-body text-sm text-textdark">
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Semua fitur Borongan Plus</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Custom Furniture (Kitchen, Bed)</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Smart Home System Basic</li>
+                        <li class="flex items-center"><i class="ph-fill ph-check-circle text-secondary mr-2"></i> Pengurusan IMB/PBG</li>
+                    </ul>
+                    <a href="#kontak" class="block w-full text-center py-3 rounded-full border border-secondary text-secondary font-medium hover:bg-secondary hover:text-white transition">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="tim" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h5 class="text-secondary font-medium tracking-wide uppercase font-body text-sm mb-2">Ahli di Bidangnya</h5>
+                <h2 class="text-4xl font-heading font-bold text-bluedeep">Di Balik Karya Hebat</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Member 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 h-64 md:h-80">
+                        <img src="https://placehold.co/400x500/EBF4FF/1E3A5F?text=Arsitek" alt="Galih" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-bluedeep/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-bluedeep flex items-center justify-center hover:bg-secondary hover:text-white transition"><i class="ph-fill ph-instagram-logo"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-bluedeep flex items-center justify-center hover:bg-secondary hover:text-white transition"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl text-bluedeep">Galih S.T.</h4>
+                    <p class="font-body text-secondary text-sm">Principal Architect</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 h-64 md:h-80">
+                        <img src="https://placehold.co/400x500/EBF4FF/1E3A5F?text=Engineer" alt="Ahmad" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-bluedeep/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-bluedeep flex items-center justify-center hover:bg-secondary hover:text-white transition"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl text-bluedeep">Ahmad S.T.</h4>
+                    <p class="font-body text-secondary text-sm">Civil Engineer</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 h-64 md:h-80">
+                        <img src="https://placehold.co/400x500/EBF4FF/1E3A5F?text=Interior" alt="Nisa" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-bluedeep/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-bluedeep flex items-center justify-center hover:bg-secondary hover:text-white transition"><i class="ph-fill ph-instagram-logo"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl text-bluedeep">Nisa S.Ds.</h4>
+                    <p class="font-body text-secondary text-sm">Interior Designer</p>
+                </div>
+                <!-- Member 4 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 h-64 md:h-80">
+                        <img src="https://placehold.co/400x500/EBF4FF/1E3A5F?text=Project+Manager" alt="Budi" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-bluedeep/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-bluedeep flex items-center justify-center hover:bg-secondary hover:text-white transition"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="font-heading font-bold text-xl text-bluedeep">Budi</h4>
+                    <p class="font-body text-secondary text-sm">Project Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-primary reveal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold text-bluedeep">Pertanyaan Umum</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-heading font-bold text-lg text-textdark flex justify-between items-center focus:outline-none">
+                        Apakah GALE melayani proyek di luar Mataram?
+                        <i class="ph ph-plus text-secondary transition-transform duration-300 transform font-bold text-xl"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 hidden">
+                        <p class="text-textmuted font-body text-sm">Ya, kami melayani proyek konstruksi dan desain di seluruh wilayah Pulau Lombok dan NTB. Silakan hubungi kami untuk mendiskusikan lokasi proyek Anda.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-heading font-bold text-lg text-textdark flex justify-between items-center focus:outline-none">
+                        Berapa biaya desain awal?
+                        <i class="ph ph-plus text-secondary transition-transform duration-300 transform font-bold text-xl"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 hidden">
+                        <p class="text-textmuted font-body text-sm">Biaya desain sangat bergantung pada luasan dan tingkat kerumitan bangunan, mulai dari Rp 50.000/m². Namun, jika Anda menggunakan layanan borongan pembangunan penuh bersama kami, biaya gambar desain akan digratiskan.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-heading font-bold text-lg text-textdark flex justify-between items-center focus:outline-none">
+                        Berapa lama proses pembangunan rumah standar?
+                        <i class="ph ph-plus text-secondary transition-transform duration-300 transform font-bold text-xl"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 hidden">
+                        <p class="text-textmuted font-body text-sm">Untuk rumah standar tipe 45-70, proses pembangunannya memakan waktu sekitar 3-4 bulan. Kami akan memberikan timeline proyek (Curve-S) sebelum pekerjaan dimulai.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-heading font-bold text-lg text-textdark flex justify-between items-center focus:outline-none">
+                        Apakah GALE memberikan garansi bangunan?
+                        <i class="ph ph-plus text-secondary transition-transform duration-300 transform font-bold text-xl"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 hidden">
+                        <p class="text-textmuted font-body text-sm">Tentu. Kami memberikan masa garansi pemeliharaan selama 3-6 bulan setelah serah terima kunci (tergantung paket yang dipilih) untuk menjamin kualitas bangunan yang kami kerjakan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA -->
+    <section class="py-24 relative overflow-hidden bg-bluedeep reveal">
+        <div class="absolute inset-0 z-0">
+            <img src="https://placehold.co/1920x600/1A1A2E/FFFFFF?text=Blueprint" alt="Blueprint" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-bluedeep/95 to-secondary/80"></div>
+            <!-- Spotlight / Beam -->
+            <div class="absolute -top-64 -left-64 w-96 h-96 bg-white/20 rounded-full blur-[100px]"></div>
+            <div class="absolute -bottom-64 -right-64 w-96 h-96 bg-secondary/40 rounded-full blur-[100px]"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight">Siap Membangun Impian Anda Bersama Kami?</h2>
+            <p class="text-xl text-gray-200 font-body mb-10 font-light">Mari diskusikan ide Anda hari ini. Konsultasi pertama gratis dan tanpa komitmen.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#kontak" class="bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-bluedeep transition shadow-[0_0_20px_rgba(74,144,217,0.6)]"><i class="ph-bold ph-whatsapp-logo mr-2"></i> Hubungi via WhatsApp</a>
+                <a href="#kontak" class="glassmorphism text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition">Isi Formulir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-white border-b border-gray-100 reveal">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center glassmorphism p-10 rounded-3xl border border-gray-200 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-bluelight"></div>
+            <h3 class="text-2xl font-heading font-bold text-bluedeep mb-3">Ikuti Perkembangan Konstruksi Terkini</h3>
+            <p class="text-textmuted font-body mb-6 text-sm">Dapatkan tips merenovasi rumah, tren arsitektur, dan promo desain eksklusif langsung di inbox Anda.</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                <input type="email" placeholder="Masukkan alamat email Anda" class="flex-1 px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent font-body text-sm" required>
+                <button type="submit" class="bg-bluedeep text-white px-6 py-3 rounded-full hover:bg-secondary transition font-medium text-sm font-body shadow-md hover:-translate-y-1 transform duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Form & Maps -->
+    <section id="kontak" class="py-24 bg-primary reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Form -->
+                <div class="w-full lg:w-1/2 bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100">
+                    <h5 class="text-secondary font-medium tracking-wide uppercase font-body text-sm mb-2">Mari Berbicara</h5>
+                    <h2 class="text-3xl font-heading font-bold text-bluedeep mb-8">Kirimkan Pesan Anda</h2>
+                    
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-textdark font-body mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent font-body" placeholder="Budi Santoso" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-textdark font-body mb-2">No. HP / WhatsApp</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent font-body" placeholder="081234567890" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-textdark font-body mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent font-body" placeholder="budi@example.com" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-textdark font-body mb-2">Jenis Layanan</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent font-body bg-white appearance-none cursor-pointer">
+                                <option>Desain Arsitektur</option>
+                                <option>Borongan Bangunan</option>
+                                <option>Renovasi</option>
+                                <option>Desain Interior</option>
+                                <option>Konsultasi Umum</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-textdark font-body mb-2">Pesan Anda</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent font-body resize-none" placeholder="Ceritakan sedikit tentang proyek Anda..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-bluedeep text-white font-medium py-4 rounded-xl hover:bg-secondary transition shadow-lg hover:shadow-xl font-body text-lg group">
+                            Kirim Pesan <i class="ph-bold ph-paper-plane-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Info Contact & Maps -->
+                <div class="w-full lg:w-1/2 flex flex-col space-y-8">
+                    <!-- Info Box -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start">
+                            <div class="w-12 h-12 bg-bluelight rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ph-fill ph-map-pin text-secondary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-bluedeep mb-1">Alamat</h4>
+                                <p class="font-body text-sm text-textmuted">Jl. Udayana No. 12, Kota Mataram, Nusa Tenggara Barat 83122</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start">
+                            <div class="w-12 h-12 bg-bluelight rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ph-fill ph-phone text-secondary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-bluedeep mb-1">Telepon</h4>
+                                <p class="font-body text-sm text-textmuted">+62 811 380 9999<br>+62 370 611 222</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start">
+                            <div class="w-12 h-12 bg-bluelight rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ph-fill ph-envelope-simple text-secondary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-bluedeep mb-1">Email</h4>
+                                <p class="font-body text-sm text-textmuted">halo@gale.co.id<br>proyek@gale.co.id</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start">
+                            <div class="w-12 h-12 bg-bluelight rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="ph-fill ph-clock text-secondary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-bluedeep mb-1">Jam Kerja</h4>
+                                <p class="font-body text-sm text-textmuted">Senin - Jumat: 08.00 - 17.00<br>Sabtu: 08.00 - 13.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Maps -->
+                    <div class="flex-1 min-h-[300px] w-full bg-gray-200 rounded-3xl overflow-hidden shadow-md">
+                        <!-- Placeholder for map iframe -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12613.626298516139!2d116.09635773121544!3d-8.583321528625902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc0bc3e52fdbd%3A0xe67db75e3a7c6c4c!2sMataram%2C%20Mataram%20City%2C%20West%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bluedeep pt-20 pb-10 border-t-4 border-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div>
+                    <a href="#" class="font-heading font-bold text-3xl text-white block mb-4">GALE.</a>
+                    <p class="text-gray-300 font-body text-sm leading-relaxed mb-6">Mewujudkan hunian, ruko, dan villa impian Anda dengan desain presisi dan konstruksi berkualitas tinggi. Partner konstruksi terpercaya di NTB.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary transition"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary transition"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary transition"><i class="ph-fill ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Navigasi -->
+                <div>
+                    <h4 class="font-heading font-bold text-white text-lg mb-6">Pintasan Menarik</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Beranda</a></li>
+                        <li><a href="#tentang" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Tentang Perusahaan</a></li>
+                        <li><a href="#layanan" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Layanan Kami</a></li>
+                        <li><a href="#portofolio" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Portofolio Proyek</a></li>
+                        <li><a href="#harga" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Estimasi Harga</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Layanan -->
+                <div>
+                    <h4 class="font-heading font-bold text-white text-lg mb-6">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Desain Arsitektur Modern</a></li>
+                        <li><a href="#" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Jasa Bangun Rumah</a></li>
+                        <li><a href="#" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Renovasi Bangunan Lama</a></li>
+                        <li><a href="#" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Perancangan Interior Kantor</a></li>
+                        <li><a href="#" class="text-gray-300 font-body text-sm hover:text-white hover:pl-2 transition-all block">Kontraktor Villa & Hotel</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Kontak -->
+                <div>
+                    <h4 class="font-heading font-bold text-white text-lg mb-6">Info Kontak</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start text-gray-300 font-body text-sm">
+                            <i class="ph-fill ph-map-pin text-secondary text-lg mr-3 mt-1"></i>
+                            <span>Mataram, Nusa Tenggara Barat</span>
+                        </li>
+                        <li class="flex items-center text-gray-300 font-body text-sm">
+                            <i class="ph-fill ph-phone-call text-secondary text-lg mr-3"></i>
+                            <span>+62 811 380 9999</span>
+                        </li>
+                        <li class="flex items-center text-gray-300 font-body text-sm">
+                            <i class="ph-fill ph-envelope-open text-secondary text-lg mr-3"></i>
+                            <span>halo@gale.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 font-body text-sm text-center md:text-left mb-4 md:mb-0">
+                    &copy; <span id="year"></span> GALE Desain Konstruksi. Hak cipta dilindungi.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white font-body text-xs transition">Kebijakan Privasi</a>
+                    <a href="#" class="text-gray-400 hover:text-white font-body text-xs transition">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WA -->
+    <a href="https://wa.me/628113809999" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-transform duration-300 group flex items-center justify-center">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-16 bg-white text-textdark text-sm font-bold font-body py-1.5 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap border border-gray-100">
+            Chat bersama Tim GALE!
+        </span>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[9999] bg-black/95 hidden items-center justify-center flex-col transition-opacity duration-300 opacity-0">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-secondary opacity-70 transition text-5xl">&times;</button>
+        <img id="lightbox-img" src="" class="max-w-[90%] max-h-[85vh] object-contain rounded-xl shadow-2xl transition-transform duration-300 scale-95">
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Loading Screen Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    document.body.classList.remove('overflow-hidden');
+                }, 500);
+            }, 800);
+        });
+
+        // Sticky Navbar with Scroll detection
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md', 'bg-white/80', 'backdrop-blur-xl', 'border-white');
+                navbar.classList.remove('bg-white/10', 'border-white/20');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/80', 'backdrop-blur-xl', 'border-white');
+                navbar.classList.add('bg-white/10', 'border-white/20');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Click outside to close mobile menu
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Reveal Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                    // trigger counter if exists inside
+                    const counters = entry.target.querySelectorAll('.counter');
+                    if (counters.length > 0) startCounters(counters);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Animated Number Counter
+        function startCounters(counters) {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const speed = 200; // lower is faster
+                    const inc = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Portfolio Filter
+        const filterBtns = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-bluedeep', 'border-bluedeep', 'text-white', 'active');
+                    b.classList.add('text-textmuted', 'border-gray-300');
+                });
+                
+                // Add active class to current
+                btn.classList.remove('text-textmuted', 'border-gray-300');
+                btn.classList.add('bg-bluedeep', 'border-bluedeep', 'text-white', 'active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(`filter-${filter}`)) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                const content = this.nextElementSibling;
+                
+                if (content.classList.contains('hidden')) {
+                    // Close others
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-btn i').forEach(i => {
+                        i.classList.remove('ph-minus', 'rotate-180');
+                        i.classList.add('ph-plus');
+                    });
+                    
+                    // Open this
+                    content.classList.remove('hidden');
+                    icon.classList.remove('ph-plus');
+                    icon.classList.add('ph-minus', 'rotate-180');
+                } else {
+                    // Close this
+                    content.classList.add('hidden');
+                    icon.classList.remove('ph-minus', 'rotate-180');
+                    icon.classList.add('ph-plus');
+                }
+            });
+        });
+
+        // Lightbox Functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        window.openLightbox = function(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            setTimeout(() => {
+                lightbox.style.opacity = '1';
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+        
+        window.closeLightbox = function() {
+            lightbox.style.opacity = '0';
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+            }, 300);
+            document.body.style.overflow = 'auto'; // restore generic scroller, will be overridden by classes if necessary
+        }
+        
+        // Form prevent default
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="ph ph-spinner animate-spin text-xl mr-2 inline-block"></i> Mengirim...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="ph-fill ph-check-circle text-xl mr-2 inline-block"></i> Berhasil Dikirim!';
+                btn.classList.add('bg-green-500');
+                btn.classList.remove('bg-bluedeep');
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-500');
+                    btn.classList.add('bg-bluedeep');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

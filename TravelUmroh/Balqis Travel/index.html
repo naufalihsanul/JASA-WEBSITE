@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Balqis Travel Mataram | Pilihan Paket Terbaik</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#d0c3c7",
+                        "secondary": "#005bbe",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#004492",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#434751",
+                        "tertiary-container": "#4b4245",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f3131",
+                        "tertiary": "#342c2f",
+                        "surface-variant": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#eddfe3",
+                        "inverse-primary": "#abc7ff",
+                        "on-background": "#1a1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-fixed-variant": "#4d4448",
+                        "on-primary-fixed-variant": "#0d458a",
+                        "on-secondary-fixed": "#001a40",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-tertiary-fixed": "#211a1d",
+                        "surface-container-high": "#e8e8e8",
+                        "background": "#f9f9f9",
+                        "surface-tint": "#305ea4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#bbafb2",
+                        "primary-fixed": "#d7e3ff",
+                        "outline-variant": "#c3c6d2",
+                        "secondary-container": "#488fff",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "primary": "#002d61",
+                        "on-secondary-container": "#00285b",
+                        "outline": "#737782",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-container": "#074388",
+                        "on-primary-container": "#88b2fe",
+                        "surface": "#f9f9f9",
+                        "on-primary-fixed": "#001b3f",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed": "#d7e2ff",
+                        "surface-container": "#eeeeee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #002d61 0%, #074388 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="font-serif text-2xl font-bold text-blue-900 dark:text-blue-100">Balqis Travel Mataram</div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors duration-300 font-sans text-sm"
+                    href="#">Legalitas</a>
+                <a class="text-blue-700 dark:text-blue-300 font-semibold border-b-2 border-blue-700 font-sans text-sm"
+                    href="#">Paket</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors duration-300 font-sans text-sm"
+                    href="#">Akomodasi</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors duration-300 font-sans text-sm"
+                    href="#">Testimoni</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors duration-300 font-sans text-sm"
+                    href="#">FAQ</a>
+                <button
+                    class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2 rounded-full font-medium hover:opacity-90 active:scale-95 transition-all">Daftar
+                    Sekarang</button>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header data-aos="fade-in" class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 z-10 text-center md:text-left">
+                <span
+                    class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-sm font-semibold mb-6">Berizin
+                    Resmi PPIU</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-primary leading-tight mb-6">
+                    Izin Resmi, Keberangkatan 100% Pasti - Pilih Paket Terbaik Anda
+                </h1>
+                <p class="text-lg text-on-surface-variant mb-10 max-w-xl mx-auto md:mx-0">
+                    Wujudkan ibadah Umrah yang tenang dan mabrur bersama pembimbing berpengalaman dan layanan fasilitas
+                    bintang lima.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <button
+                        class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold shadow-lg hover:shadow-primary/20 transition-all">Pilih
+                        Paket</button>
+                    <button
+                        class="px-8 py-4 border border-outline text-primary rounded-full font-bold hover:bg-surface-container-low transition-all">Lihat
+                        Jadwal</button>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <div class="absolute -top-10 -left-10 w-64 h-64 bg-primary-fixed-dim/20 rounded-full blur-3xl"></div>
+                <div
+                    class="relative z-10 rounded-xl overflow-hidden shadow-2xl transform md:rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <img alt="Kaaba Crowds" class="w-full h-auto object-cover aspect-[4/3]"
+                        data-alt="cinematic view of the holy kaaba in mecca during tawaf with soft golden sunlight illuminating the marble courtyard"
+                        src="https://images.unsplash.com/photo-1575101261474-5cb5653bb416?w=1600&auto=format&fit=crop&q=60" />
+                    <div
+                        class="absolute bottom-6 left-6 bg-surface-container-lowest/90 backdrop-blur p-4 rounded-xl shadow-lg border border-white/20 max-w-xs">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">verified</span>
+                            <p class="text-sm font-semibold text-on-surface">Legalitas Terjamin oleh Kemenag RI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Pain Points & Solutions -->
+    <section data-aos="fade-up" class="py-20 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 leading-tight">
+                        Mengapa Memilih Balqis Travel? Solusi Untuk Kekhawatiran Anda.
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-error-container flex items-center justify-center text-on-error-container">
+                                <span class="material-symbols-outlined">warning</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Khawatir Travel Ilegal?</h4>
+                                <p class="text-on-surface-variant text-sm">Balqis Travel memiliki izin PPIU resmi yang dapat
+                                    dicek langsung di aplikasi Pusaka Kemenag.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                                <span class="material-symbols-outlined">flight_takeoff</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Tiket Tidak Pasti?</h4>
+                                <p class="text-on-surface-variant text-sm">Kami menggunakan sistem Blocking Seat, tiket
+                                    sudah tersedia sebelum paket dipasarkan.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+                                <span class="material-symbols-outlined">hotel</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Hotel Jauh dari Masjid?</h4>
+                                <p class="text-on-surface-variant text-sm">Pilihan hotel kami mulai dari jarak 50m (VIP)
+                                    hingga maksimal 450m (Hemat) dengan fasilitas shuttle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-delay="400">
+                    <img alt="Medina" class="rounded-xl shadow-md mt-12"
+                        data-alt="architectural detail of the umbrellas at the prophets mosque in medina under a clear blue sky"
+                        src="https://images.unsplash.com/photo-1590273089302-ebbc53986b6e?w=800&auto=format&fit=crop&q=60" />
+                    <img alt="Makkah" class="rounded-xl shadow-md"
+                        data-alt="view of the clock tower in mecca at twilight with city lights and soft purple sky"
+                        src="https://images.unsplash.com/photo-1519818187420-8e49de7adeef?w=800&auto=format&fit=crop&q=60" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Package Comparison -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">Perbandingan Paket Umrah 2024</h2>
+                <p class="text-on-surface-variant max-w-2xl mx-auto">Tentukan pilihan sesuai kebutuhan ibadah dan
+                    kenyamanan Anda.</p>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Hemat Package -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20 hover:shadow-xl transition-all flex flex-col">
+                    <div class="mb-8">
+                        <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-2 block">Value
+                            Choice</span>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Paket Hemat</h3>
+                        <div class="text-4xl font-extrabold text-on-surface mb-2">Rp 28.5 Juta</div>
+                        <p class="text-sm text-on-surface-variant italic">Kamar Quad (Berempat)</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>Hotel Madinah: Concorde (400m)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>Hotel Makkah: Fajr Al Badia (450m)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>Penerbangan: Lion Air (Direct)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>Visa &amp; Asuransi Termasuk</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Pilih
+                        Hemat</button>
+                </div>
+                <!-- Reguler Package (Featured) -->
+                <div
+                    class="bg-primary text-white rounded-xl p-8 shadow-2xl relative transform lg:scale-105 z-20 flex flex-col overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 p-4 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-bl-xl uppercase tracking-tighter">
+                        Paling Populer</div>
+                    <div class="mb-8">
+                        <span class="text-primary-fixed font-bold text-sm tracking-widest uppercase mb-2 block">Perfect
+                            Balance</span>
+                        <h3 class="text-2xl font-bold mb-4">Paket Reguler</h3>
+                        <div class="text-4xl font-extrabold mb-2">Rp 32.9 Juta</div>
+                        <p class="text-sm text-primary-fixed/80 italic">Kamar Triple (Bertiga)</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            <span>Hotel Madinah: Al-Aqeeq (50m)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            <span>Hotel Makkah: Anjum (100m)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            <span>Penerbangan: Saudia Airlines (Direct)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            <span>Makan Buffet 3x Sehari</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+                            <span>City Tour Madinah &amp; Makkah</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full py-4 bg-white text-primary font-extrabold rounded-xl hover:bg-primary-fixed transition-all">Pilih
+                        Reguler</button>
+                </div>
+                <!-- VIP Package -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20 hover:shadow-xl transition-all flex flex-col">
+                    <div class="mb-8">
+                        <span class="text-secondary font-bold text-sm tracking-widest uppercase mb-2 block">Luxury
+                            Experience</span>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Paket VIP</h3>
+                        <div class="text-4xl font-extrabold text-on-surface mb-2">Rp 39.5 Juta</div>
+                        <p class="text-sm text-on-surface-variant italic">Kamar Double (Berdua)</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>Hotel Madinah: Shaza Regency (Halaman)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>Hotel Makkah: Hilton Suite (Zero Meter)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>Penerbangan: Saudia / Emirates</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm">
+                            <span class="material-symbols-outlined text-green-600">check_circle</span>
+                            <span>VVIP Lounge &amp; Private Handling</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Pilih
+                        VIP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Accommodations & Flights Bento -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-primary mb-12 text-center">Fasilitas Unggulan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+                <div
+                    class="md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative group">
+                    <img alt="Hotel Room"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="luxury hotel room interior with heavy ornate gold accents and a view of the haram from the window"
+                        src="https://images.unsplash.com/photo-1519817650390-64a93db51149?w=1584&auto=format&fit=crop&q=60" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
+                        <h4 class="text-white text-2xl font-bold mb-2">Akomodasi Bintang 5</h4>
+                        <p class="text-white/80">Kenyamanan istirahat Anda adalah prioritas kami agar ibadah lebih
+                            khusyuk.</p>
+                    </div>
+                </div>
+                <div
+                    class="md:col-span-2 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative group">
+                    <img alt="Flight"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="interior of a modern commercial airplane cabin with clean seats and soft ambient lighting"
+                        src="https://images.unsplash.com/photo-1720549973451-018d3623b55a?w=800&auto=format&fit=crop&q=60" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white text-xl font-bold mb-1">Direct Flight Only</h4>
+                        <p class="text-white/80 text-sm">Terbang langsung ke Jeddah/Madinah tanpa transit yang
+                            melelahkan.</p>
+                    </div>
+                </div>
+                <div data-aos="flip-up" class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-center">
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">restaurant</span>
+                    <h4 class="font-bold text-primary mb-2">Full Board Meal</h4>
+                    <p class="text-xs text-on-surface-variant">Masakan Indonesia tersedia setiap hari untuk menjaga
+                        stamina Anda.</p>
+                </div>
+                <div data-aos="flip-up" data-aos-delay="200" class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-center">
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">groups</span>
+                    <h4 class="font-bold text-primary mb-2">Mutawif Berpengalaman</h4>
+                    <p class="text-xs text-on-surface-variant">Dibimbing oleh ustadz yang kompeten sesuai Sunnah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Registration Steps -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-primary mb-6">4 Langkah Mudah Menuju Baitullah</h2>
+                    <p class="text-on-surface-variant mb-12">Proses pendaftaran yang transparan dan dibantu sepenuhnya
+                        oleh tim admin kami.</p>
+                    <div class="space-y-12 relative">
+                        <!-- Connector Line -->
+                        <div
+                            class="absolute left-6 top-4 bottom-4 w-0.5 border-l-2 border-dashed border-outline-variant/40">
+                        </div>
+                        <div class="relative flex gap-8">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">
+                                1</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 text-primary">Pilih Paket &amp; Tanggal</h4>
+                                <p class="text-on-surface-variant">Konsultasikan jadwal keberangkatan yang sesuai dengan
+                                    agenda Anda.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-8">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">
+                                2</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 text-primary">Booking Seat &amp; DP</h4>
+                                <p class="text-on-surface-variant">Amankan kuota Anda hanya dengan DP Rp 5 Juta per
+                                    orang.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-8">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">
+                                3</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 text-primary">Penyerahan Dokumen</h4>
+                                <p class="text-on-surface-variant">Kirimkan Paspor dan dokumen lainnya untuk pengurusan
+                                    Visa &amp; tiket.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex gap-8">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">
+                                4</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 text-primary">Manasik &amp; Berangkat</h4>
+                                <p class="text-on-surface-variant">Pembekalan ibadah menyeluruh sebelum hari
+                                    keberangkatan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 shadow-inner">
+                    <h3 class="text-2xl font-bold text-primary mb-8">Daftar Sekarang</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-on-surface-variant">Nama Lengkap</label>
+                            <input
+                                class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary/40"
+                                placeholder="Masukkan nama sesuai KTP" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-on-surface-variant">Nomor WhatsApp</label>
+                            <input
+                                class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary/40"
+                                placeholder="0812xxxx" type="tel" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-on-surface-variant">Pilih Paket</label>
+                            <select
+                                class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary/40">
+                                <option>Paket Hemat</option>
+                                <option selected="">Paket Reguler</option>
+                                <option>Paket VIP</option>
+                            </select>
+                        </div>
+                        <button
+                            class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl mt-4 shadow-lg hover:opacity-90 active:scale-[0.98] transition-all"
+                            type="submit">Kirim Data Pendaftaran</button>
+                    </form>
+                    <p class="text-center text-xs text-on-surface-variant mt-6">Data Anda aman dan akan segera dihubungi
+                        oleh konsultan kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials & Gallery -->
+    <section data-aos="fade-up" class="py-24 bg-surface-container-low overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Apa Kata Jamaah Kami?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl relative shadow-sm border border-outline-variant/10">
+                    <div class="absolute -top-4 -left-4 text-6xl text-secondary/10 font-serif">“</div>
+                    <p class="text-on-surface-variant italic mb-6">"Alhamdulillah, umrah bersama Balqis Travel sangat
+                        berkesan. Hotelnya sangat dekat dengan Masjid Nabawi dan Masjidil Haram, memudahkan saya yang
+                        membawa orang tua."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary-fixed"></div>
+                        <div>
+                            <h5 class="font-bold text-primary">Ibu Siti Aminah</h5>
+                            <p class="text-xs text-on-surface-variant">Jamaah Paket Reguler - Maret 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl relative shadow-sm border border-outline-variant/10">
+                    <div class="absolute -top-4 -left-4 text-6xl text-secondary/10 font-serif">“</div>
+                    <p class="text-on-surface-variant italic mb-6">"Paling suka dengan bimbingan manasiknya yang sangat
+                        detail. Saat di tanah suci, pembimbingnya sabar sekali membimbing setiap rukun umrah."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-fixed"></div>
+                        <div>
+                            <h5 class="font-bold text-primary">Bpk. Ahmad Fauzi</h5>
+                            <p class="text-xs text-on-surface-variant">Jamaah Paket Hemat - Januari 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section data-aos="fade-up" class="py-24 px-6 bg-surface">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">Pertanyaan Umum (FAQ)</h2>
+            <div class="space-y-4">
+                <details class="group bg-surface-container-low rounded-xl">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold text-primary">Apakah harga sudah termasuk perlengkapan?</span>
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-on-surface-variant text-sm">
+                        Ya, harga sudah termasuk Koper, Kain Ihram/Mukena, Batik Seragam, Buku Panduan, dan Tas
+                        Selempang.
+                    </div>
+                </details>
+                <details class="group bg-surface-container-low rounded-xl">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold text-primary">Bagaimana jika paspor saya belum ada?</span>
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-on-surface-variant text-sm">
+                        Kami akan memberikan surat rekomendasi untuk pengurusan paspor di kantor Imigrasi terdekat di
+                        kota Anda.
+                    </div>
+                </details>
+                <details class="group bg-surface-container-low rounded-xl">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold text-primary">Apakah ada pembatalan jika kuota tidak terpenuhi?</span>
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-on-surface-variant text-sm">
+                        Tidak. Keberangkatan kami 100% Pasti karena kami menggunakan sistem Blocking Seat. Anda akan
+                        berangkat sesuai tanggal yang dipilih.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-slate-950">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto border-t-0">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <div class="font-serif text-xl font-bold text-blue-900 dark:text-blue-100 mb-2">Balqis Travel Mataram</div>
+                <p class="font-sans text-sm text-slate-500 dark:text-slate-400 max-w-xs">Mutiara Garden, Jl. Udayana No.Kav. 19, Karang Baru, Kota Mataram.<br>Telepon: 0819-1728-6444<br>Penyelenggara Perjalanan Ibadah
+                    Umrah (PPIU) dengan standar pelayanan premium dan amanah.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mb-8 md:mb-0">
+                <a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-600 transition-colors"
+                    href="#">Kebijakan Privasi</a>
+                <a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-600 transition-colors"
+                    href="#">Syarat &amp; Ketentuan</a>
+                <a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-600 transition-colors"
+                    href="#">Bantuan</a>
+                <a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-600 transition-colors"
+                    href="#">Kontak Kami</a>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="font-sans text-sm text-slate-500 dark:text-slate-400">© 2024 Balqis Travel Mataram.
+                    Berizin Resmi PPIU.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+
+</html>
